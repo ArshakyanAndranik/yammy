@@ -13,7 +13,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* width: 100%; */
 }
 .book{
     font-size: 14px;
@@ -24,6 +23,13 @@
     border-radius: 50px;
     transition: 0.3s;
 }
+a {
+color: #ce1212;
+  text-decoration: none;
+}
+
+
+
 .logo {
   font-weight: 700;
   color: #000;
@@ -62,7 +68,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 3px;
-    font-family: var(--font-secondary);
+    /* font-family: var(--font-secondary); */
     font-size: 16px;
     font-weight: 600;
     color: #7f7f90;
@@ -85,7 +91,7 @@
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: var(--color-primary);
+    background-color: "#ce1212";
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -139,7 +145,7 @@
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover > a {
-    color: var(--color-primary);
+    color: "#ce1212";
   }
 
   .navbar .dropdown:hover > ul {
@@ -201,7 +207,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    font-family: var(--font-secondary);
+    /* font-family: var(--font-secondary); */
     border-bottom: 2px solid rgba(255, 255, 255, 0.8);
     font-size: 16px;
     font-weight: 600;
@@ -244,7 +250,7 @@
   }
 
   .mobile-nav-show {
-    color: var(--color-secondary);
+    color: "#37373f";
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
@@ -254,7 +260,7 @@
   }
 
   .mobile-nav-hide {
-    color: var(--color-secondary);
+    color: "#37373f";
     font-size: 32px;
     cursor: pointer;
     line-height: 0;

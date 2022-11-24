@@ -1,3 +1,4 @@
+import { ChervonSVG } from '../../assets';
 import  './header.css'
 
 const Header = () => {
@@ -31,8 +32,7 @@ const Header = () => {
             </li>
             <li className="dropdown">
               <a href="#">
-                <span>Drop Down</span>{" "}
-                <i className="bi bi-chevron-down dropdown-indicator"></i>
+                <span>Drop Down</span> <img src={ChervonSVG} />
               </a>
               <ul>
                 <li>
@@ -40,8 +40,8 @@ const Header = () => {
                 </li>
                 <li className="dropdown">
                   <a href="#">
-                    <span>Deep Drop Down</span>{" "}
-                    <i className="bi bi-chevron-down dropdown-indicator"></i>
+                    <span>Deep Drop Down</span>
+                    <img src={ChervonSVG} />
                   </a>
                   <ul>
                     <li>
@@ -80,8 +80,7 @@ const Header = () => {
         <a className="book" href="#book-a-table">
           Book a Table
         </a>
-        <i className="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-        <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
       </div>
     </header>
   );};
