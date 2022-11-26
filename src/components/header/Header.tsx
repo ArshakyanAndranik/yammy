@@ -120,17 +120,19 @@ const Navbar = styled.nav`
     }
     ul {
       li {
-        a:before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: -6px;
-          left: 0;
-          background-color: "#ce1212";
-          visibility: hidden;
-          width: 0px;
-          transition: all 0.3s ease-in-out 0s;
+        a {
+          :before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: ${accentColors.primary};
+            visibility: hidden;
+            width: 0px;
+            transition: all 0.3s ease-in-out 0s;
+          }
         }
       }
     }
@@ -163,6 +165,7 @@ const Navbar = styled.nav`
         color: ${accentColors.black};
       }
     }
+
     .active {
       color: ${accentColors.black};
     }
