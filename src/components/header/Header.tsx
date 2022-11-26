@@ -1,7 +1,7 @@
 import { ChervonSVG } from "../../assets";
 import styled from "styled-components";
 import { accentColors } from "../../assets";
-import "./header.css";
+// import "./header.css";
 
 const Wrapper = styled.header`
   position: fixed;
@@ -41,7 +41,7 @@ const Book = styled.a`
   transition: 0.3s;
 `;
 const Icon = styled.i`
-  color: "#37373f";
+  color: ${accentColors.darkBlue};
   font-size: 28px;
   cursor: pointer;
   line-height: 0;
@@ -50,7 +50,7 @@ const Icon = styled.i`
   margin: 0 10px 0 20px;
 `;
 const Icon2 = styled.i`
-  color: "#37373f";
+  color: ${accentColors.darkBlue};
   font-size: 32px;
   cursor: pointer;
   line-height: 0;
@@ -69,8 +69,6 @@ const Navbar = styled.nav`
       display: flex;
       list-style: none;
       align-items: center;
-    }
-    ul {
       li {
         white-space: nowrap;
         padding: 10px 0 10px 28px;
@@ -91,20 +89,21 @@ const Navbar = styled.nav`
       white-space: nowrap;
       transition: 0.3s;
       position: relative;
+      :focus {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3px;
+        /* font-family: var(--font-secondary); */
+        font-size: 16px;
+        font-weight: 600;
+        color: ${accentColors.grey};
+        white-space: nowrap;
+        transition: 0.3s;
+        position: relative;
+      }
     }
-    a: focus {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 3px;
-      /* font-family: var(--font-secondary); */
-      font-size: 16px;
-      font-weight: 600;
-      color: ${accentColors.grey};
-      white-space: nowrap;
-      transition: 0.3s;
-      position: relative;
-    }
+
     a {
       i {
         font-size: 12px;
@@ -194,52 +193,25 @@ const Navbar = styled.nav`
         box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
         transition: 0.3s;
         border-radius: 4px;
-      }
-    }
-    .dropdown {
-      ul {
+        .active {
+          :hover {
+            color: "#ce1212";
+          }
+        }
         li {
           min-width: 200px;
-        }
-      }
-    }
-    .dropdown {
-      ul {
-        li {
+
           a {
             padding: 10px 20px;
             font-size: 15px;
             text-transform: none;
             font-weight: 600;
-          }
-        }
-      }
-    }
-    .dropdown {
-      ul {
-        li {
-          a {
+            :hover {
+              color: "#ce1212";
+            }
             i {
               font-size: 12px;
             }
-          }
-        }
-      }
-    }
-    .dropdown {
-      ul {
-        a {
-          :hover {
-            color: "#ce1212";
-          }
-        }
-      }
-    }
-    .dropdown {
-      ul {
-        .active {
-          :hover {
-            color: "#ce1212";
           }
         }
       }

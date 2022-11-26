@@ -13,6 +13,7 @@ export const accentColors = {
   orangeLight: "#FFE5C3",
   white: "#fff",
   grey: "#7f7f90",
+  darkBlue: "#37373f",
   black: "##000",
   default: "#212529",
   primary: "#ce1212",
