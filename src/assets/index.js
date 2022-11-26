@@ -1,4 +1,4 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 import chervon from "./chevron-down.svg";
 
 export const ChervonSVG = chervon;
@@ -11,6 +11,9 @@ export const secondary = "Inter, sans-serif";
 // Colors
 export const accentColors = {
   orangeLight: "#FFE5C3",
+  white: "#fff",
+  grey: "#7f7f90",
+  black: "##000",
   default: "#212529",
   primary: "#ce1212",
   secondary: "#37373f",
