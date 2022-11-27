@@ -1,4 +1,4 @@
-import { ChervonSVG } from "../../assets";
+import { ChervonSVG, secondary } from "../../assets";
 import styled from "styled-components";
 import { accentColors } from "../../assets";
 // import "./header.css";
@@ -27,10 +27,18 @@ const Logo = styled.a`
   color: ${accentColors.default};
   margin: 0;
   margin-left: 140px;
+  span {
+    color: ${accentColors.primary};
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    font-family: ${secondary};
+  }
 `;
-const Dut = styled.span`
-  color: ${accentColors.primary};
-`;
+
 const Book = styled.a`
   font-size: 14px;
   color: ${accentColors.white};
@@ -39,6 +47,23 @@ const Book = styled.a`
   margin-left: 50px;
   border-radius: 50px;
   transition: 0.3s;
+  :focus {
+    font-size: 14px;
+    color: ${accentColors.white};
+    background: ${accentColors.primary};
+    padding: 8px 20px;
+    margin-left: 50px;
+    border-radius: 50px;
+    transition: 0.3s;
+    :hover {
+      color: #fff;
+      background: rgba(206, 18, 18, 0.8);
+    }
+  }
+  :hover {
+    color: #fff;
+    background: rgba(206, 18, 18, 0.8);
+  }
 `;
 const Icon = styled.i`
   color: ${accentColors.darkBlue};
@@ -69,13 +94,13 @@ const Navbar = styled.nav`
       display: flex;
       list-style: none;
       align-items: center;
-      li {
-        white-space: nowrap;
-        padding: 10px 0 10px 28px;
-      }
     }
     li {
       position: relative;
+    }
+    > ul > li {
+      white-space: nowrap;
+      padding: 10px 0 10px 28px;
     }
     a {
       display: flex;
@@ -89,21 +114,20 @@ const Navbar = styled.nav`
       white-space: nowrap;
       transition: 0.3s;
       position: relative;
-      :focus {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 3px;
-        /* font-family: var(--font-secondary); */
-        font-size: 16px;
-        font-weight: 600;
-        color: ${accentColors.grey};
-        white-space: nowrap;
-        transition: 0.3s;
-        position: relative;
-      }
     }
-
+    a:focus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3px;
+      font-family: var(--font-secondary);
+      font-size: 16px;
+      font-weight: 600;
+      color: #7f7f90;
+      white-space: nowrap;
+      transition: 0.3s;
+      position: relative;
+    }
     a {
       i {
         font-size: 12px;
@@ -111,75 +135,48 @@ const Navbar = styled.nav`
         margin-left: 5px;
       }
     }
-    a {
-      :focus i {
+    a:focus {
+      i {
         font-size: 12px;
         line-height: 0;
         margin-left: 5px;
       }
     }
-    ul {
-      li {
-        a {
-          :before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -6px;
-            left: 0;
-            background-color: ${accentColors.primary};
-            visibility: hidden;
-            width: 0px;
-            transition: all 0.3s ease-in-out 0s;
-          }
-        }
-      }
+    > ul > li a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background-color: ${accentColors.primary};
+      visibility: hidden;
+      width: 0px;
+      transition: all 0.3s ease-in-out 0s;
     }
-    a {
-      :hover {
-        :before {
-          visibility: visible;
-          width: 100%;
-        }
-      }
+    a:hover:before {
+      visibility: visible;
+      width: 100%;
     }
-    li {
-      :hover {
-        a {
-          :before {
-            visibility: visible;
-            width: 100%;
-          }
-        }
-      }
+    li:hover > a:before {
+      visibility: visible;
+      width: 100%;
     }
-    .active {
-      :before {
-        visibility: visible;
-        width: 100%;
-      }
+    .active:before {
+      visibility: visible;
+      width: 100%;
     }
-    a {
-      :hover {
-        color: ${accentColors.black};
-      }
-    }
-
-    .active {
+    a:hover {
       color: ${accentColors.black};
     }
     .active {
-      :focus {
-        color: ${accentColors.black};
-      }
+      color: ${accentColors.black};
     }
-    li {
-      :hover {
-        a {
-          color: ${accentColors.black};
-        }
-      }
+    .active:focus {
+      color: ${accentColors.black};
+    }
+    li:hover > a {
+      color: ${accentColors.black};
     }
     .dropdown {
       ul {
@@ -192,16 +189,70 @@ const Navbar = styled.nav`
         z-index: 99;
         opacity: 0;
         visibility: hidden;
-        background: #fff;
+        background: ${accentColors.white};
         box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
         transition: 0.3s;
         border-radius: 4px;
-        .active {
-          :hover {
-            color: "#ce1212";
+        li {
+          min-width: 200px;
+        }
+        a {
+          padding: 10px 20px;
+          font-size: 15px;
+          text-transform: none;
+          font-weight: 600;
+          i {
+            font-size: 12px;
           }
         }
-        li {
+        .dropdown {
+          ul {
+            a:hover {
+              color: ${accentColors.primary};
+            }
+          }
+          ul {
+            .active:hover {
+              color: ${accentColors.primary};
+            }
+          }
+
+          ul {
+            li:hover > a {
+              color: ${accentColors.primary};
+            }
+          }
+        }
+        .dropdown:hover > ul {
+          opacity: 1;
+          top: 100%;
+          visibility: visible;
+        }
+        .dropdown {
+          .dropdown {
+            ul {
+              top: 0;
+              left: calc(100% - 30px);
+              visibility: hidden;
+            }
+          }
+        }
+
+        .dropdown {
+          .dropdown:hover > ul {
+            opacity: 1;
+            top: 0;
+            left: 100%;
+            visibility: visible;
+          }
+        }
+
+        .active {
+          :hover {
+            color: ${accentColors.primary};
+          }
+        } 
+         li {
           min-width: 200px;
 
           a {
@@ -221,23 +272,15 @@ const Navbar = styled.nav`
     }
     .dropdown {
       ul {
-        li {
-          :hover {
-            a {
+        li:hover > a {         
               color: "#ce1212";
-            }
-          }
         }
       }
     }
-    .dropdown {
-      :hover {
-        ul {
-          opacity: 1;
-          top: 100%;
-          visibility: visible;
-        }
-      }
+    .dropdown:hover > ul {
+      opacity: 1;
+      top: 100%;
+      visibility: visible;
     }
     .dropdown {
       .dropdown {
@@ -249,17 +292,14 @@ const Navbar = styled.nav`
       }
     }
     .dropdown {
-      .dropdown {
-        :hover {
-          ul {
-            opacity: 1;
-            top: 0;
-            left: 100%;
-            visibility: visible;
-          }
-        }
+      .dropdown :hover > ul {
+        opacity: 1;
+        top: 0;
+        left: 100%;
+        visibility: visible;
       }
     }
+
     .dropdown {
       .dropdown {
         ul {
@@ -268,53 +308,47 @@ const Navbar = styled.nav`
       }
     }
     .dropdown {
-      .dropdown {
-        :hover {
-          ul {
-            left: -100%;
-          }
-        }
+      .dropdown:hover > ul {
+        left: -100%;
       }
     }
-    @media (max-width: 1366px) {
-      .dropdown {
-        .dropdown {
-          ul {
-            left: -90%;
-          }
-        }
-      }
-      .dropdown {
-        .dropdown {
-          :hover {
-            ul {
-              left: -100%;
-            }
-          }
-        }
-      }
-    }
-    @media (max-width: 1279px) {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 100%;
-      max-width: 400px;
-      border-left: 1px solid #666;
-      bottom: 0;
+  }
+
+  @media (max-width: 1279px) {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    border-left: 1px solid #666;
+    bottom: 0;
+    transition: 0.3s;
+    z-index: 9997;
+    ul {
+      position: absolute;
+      inset: 0;
+      padding: 50px 0 10px 0;
+      margin: 0;
+      background: rgba(255, 255, 255, 0.9);
+      overflow-y: auto;
       transition: 0.3s;
-      z-index: 9997;
-      ul {
-        position: absolute;
-        inset: 0;
-        padding: 50px 0 10px 0;
-        margin: 0;
-        background: rgba(255, 255, 255, 0.9);
-        overflow-y: auto;
-        transition: 0.3s;
-        z-index: 9998;
-      }
-      a {
+      z-index: 9998;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      /* font-family: var(--font-secondary); */
+      border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      font-weight: 600;
+      color: #7f7f90;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+    a {
+      :focus {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -327,59 +361,56 @@ const Navbar = styled.nav`
         white-space: nowrap;
         transition: 0.3s;
       }
-      a {
-        :focus {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 10px 20px;
-          /* font-family: var(--font-secondary); */
-          border-bottom: 2px solid rgba(255, 255, 255, 0.8);
-          font-size: 16px;
-          font-weight: 600;
-          color: #7f7f90;
-          white-space: nowrap;
-          transition: 0.3s;
-        }
+    }
+    a {
+      i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
       }
-      a {
+    }
+    a {
+      :focus {
         i {
           font-size: 12px;
           line-height: 0;
           margin-left: 5px;
         }
       }
-      a {
-        :focus {
-          i {
-            font-size: 12px;
-            line-height: 0;
-            margin-left: 5px;
-          }
-        }
+    }
+    a {
+      :hover {
+        color: #000;
       }
-      a {
-        :hover {
+    }
+    li {
+      :hover {
+        a {
           color: #000;
         }
       }
-      li {
-        :hover {
-          a {
-            color: #000;
-          }
-        }
-      }
-      .active {
+    }
+    .active {
+      color: #000;
+      border-color: ${accentColors.primary};
+    }
+    .active {
+      :focus {
         color: #000;
         border-color: ${accentColors.primary};
       }
-      .active {
-        :focus {
-          color: #000;
-          border-color: ${accentColors.primary};
-        }
+    }
+    .dropdown {
+      ul {
+        position: static;
+        display: none;
+        padding: 10px 0;
+        margin: 10px 20px;
+        transition: all 0.5s ease-in-out;
+        border: 1px solid #eee;
       }
+    }
+    .dropdown {
       .dropdown {
         ul {
           position: static;
@@ -390,28 +421,16 @@ const Navbar = styled.nav`
           border: 1px solid #eee;
         }
       }
-      .dropdown {
-        .dropdown {
-          ul {
-            position: static;
-            display: none;
-            padding: 10px 0;
-            margin: 10px 20px;
-            transition: all 0.5s ease-in-out;
-            border: 1px solid #eee;
-          }
-        }
+    }
+    .dropdown {
+      .dropdown-active {
+        display: block;
       }
+    }
+    .dropdown {
       .dropdown {
         .dropdown-active {
           display: block;
-        }
-      }
-      .dropdown {
-        .dropdown {
-          .dropdown-active {
-            display: block;
-          }
         }
       }
     }
@@ -424,7 +443,7 @@ const Header = () => {
       <Container>
         <Logo>
           <h1>
-            Yummy<Dut>.</Dut>
+            Yummy<span>.</span>
           </h1>
         </Logo>
         <Navbar>

@@ -22,7 +22,11 @@ h6 {
   font-family: "Inter", sans-serif;
 }
 
-
+section {
+  overflow: hidden;
+  padding: 80px 0;
+  scroll-margin-top: 90px;
+}
 
 body {
   margin: 0;
