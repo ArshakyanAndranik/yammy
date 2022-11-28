@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "./components/header/Header";
+import Home from "./components/home/Home";
 
 const App = () => {
   return (
     <>
       <Header />
+      <Home/>
       <div>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aspernatur eos quae possimus minus corrupti veritatis praesentium assumenda incidunt doloribus voluptates blanditiis, rerum molestiae quod sapiente! Repudiandae fugiat nisi deleniti.
         Quos maxime, ex commodi iste facilis quod ullam deleniti sint atque adipisci eaque laboriosam asperiores consectetur inventore minus rerum saepe sit corrupti necessitatibus. Voluptate ullam recusandae sed id eaque laborum.
