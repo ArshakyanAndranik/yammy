@@ -1,4 +1,5 @@
 import React from "react";
+import About from "./components/about/About";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 
@@ -7,6 +8,7 @@ const App = () => {
     <>
       <Header />
       <Home/>
+      <About/>
       <div>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia aspernatur eos quae possimus minus corrupti veritatis praesentium assumenda incidunt doloribus voluptates blanditiis, rerum molestiae quod sapiente! Repudiandae fugiat nisi deleniti.
         Quos maxime, ex commodi iste facilis quod ullam deleniti sint atque adipisci eaque laboriosam asperiores consectetur inventore minus rerum saepe sit corrupti necessitatibus. Voluptate ullam recusandae sed id eaque laborum.

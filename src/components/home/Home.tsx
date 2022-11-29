@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { accentColors, HeroSvg, PlayCircleSVG, primary } from "../../assets";
-import AOS from "aos";
+// import AOS from "aos";
 
 const Section = styled.section`
   display: flex;
@@ -14,8 +14,8 @@ const Section = styled.section`
 `;
 const Container = styled.div`
   width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  /* padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5); */
   margin-right: auto;
   margin-left: auto;
   @media (min-width: 576px) {
@@ -37,14 +37,17 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  
+  @media (max-width: 992px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 `;
 
 const NoName = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 `;
 
 const Info = styled.h2`
@@ -60,6 +63,7 @@ const Info = styled.h2`
 const Paragraph = styled.p`
   color: #4f4f5a;
   font-weight: 400;
+  /* margin-left: 70px; */
   margin-bottom: 30px;
   max-width: 400px;
 `;
@@ -97,8 +101,6 @@ const ImgSvg = styled.img`
   height: auto;
 `;
 
-
-
 const Home = () => {
   return (
     <Section id="hero">
@@ -117,8 +119,8 @@ const Home = () => {
             <Buttons>
               <Btn1 href="#book-a-table">Book a Table</Btn1>
               <Btn2 href="https://www.youtube.com/watch?v=LXb3EKWsInQ">
-                <ImgSvg src={PlayCircleSVG} />
-                Watch Video
+                <ImgSvg style={{ marginBottom: "-10px" }} src={PlayCircleSVG} />
+                <span style={{ marginLeft: "10px" }}>Watch Video</span>
               </Btn2>
             </Buttons>
           </NoName>
