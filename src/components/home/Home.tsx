@@ -14,8 +14,6 @@ const Section = styled.section`
 `;
 const Container = styled.div`
   width: 100%;
-  /* padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5); */
   margin-right: auto;
   margin-left: auto;
   @media (min-width: 576px) {
