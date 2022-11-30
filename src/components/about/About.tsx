@@ -43,26 +43,21 @@ const SectionHeader = styled.div`
     font-size: 48px;
     font-weight: 400;
     font-family: ${primary};
-    :last-child {
-      margin-bottom: 0;
-    }
     span {
       color: ${accentColors.primary};
     }
   }
 `;
-
-const Row = styled.div`
-  /* display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x)); */
-`;
 const Position = styled.div`
   position: relative;
   background-image: url(${AboutSvg});
-  min-height: 500px;
+  background-repeat: no-repeat;
+  min-height: 750px;
+  width: 760px;
+  margin-right: 100px;
+  @media (max-width: 992px) {
+    margin-left: 0px;
+  }
 `;
 const CallUs = styled.div`
   position: absolute;
@@ -85,20 +80,28 @@ const CallUs = styled.div`
     color: ${accentColors.primary};
   }
 `;
-
-const Align = styled.div`
-    display: flex;
-    align-items: flex-end;
-`
+const Row = styled.div`
+  display: flex;
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+`;
 const Content = styled.div`
+  min-height: 750px;
+  margin-top: -20px;
+  width: 660px;
+  @media (max-width: 992px) {
+    width: 760px;
+  }
   ul {
     list-style: none;
     padding: 0;
     li {
       padding: 0 0 8px 26px;
       position: relative;
+      font-size: 20px;
     }
-    i {
+    img {
       position: absolute;
       font-size: 20px;
       left: 0;
@@ -208,6 +211,8 @@ const About = () => {
             Learn More <span>About Us</span>
           </p>
         </SectionHeader>
+
+
         <Row>
           <Position>
             <CallUs>
