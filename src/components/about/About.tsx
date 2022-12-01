@@ -58,6 +58,9 @@ const Position = styled.div`
   @media (max-width: 992px) {
     margin-left: 0px;
   }
+  @media (max-width: 900px) {
+    width: 660px;
+  }
 `;
 const CallUs = styled.div`
   position: absolute;
@@ -90,9 +93,9 @@ const Content = styled.div`
   min-height: 750px;
   margin-top: -20px;
   width: 660px;
-  @media (max-width: 992px) {
+  /* @media (max-width: 992px) {
     width: 760px;
-  }
+  } */
   ul {
     list-style: none;
     padding: 0;
@@ -116,7 +119,12 @@ const Content = styled.div`
 
 
 const Relative = styled.div`
-position: relative;
+  position: relative;
+  img {
+    @media (max-width: 900px) {
+      width: 660px;
+    }
+  }
 `;
 
 const Ahref = styled.a`
