@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 interface IProps {
   end: any;
-  timer: any
+  timer: number
 }
 
 const CountUp: React.FC<IProps> = ({ end, timer=50 }) => {
