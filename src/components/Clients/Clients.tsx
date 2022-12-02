@@ -1,14 +1,6 @@
 import styled from "styled-components";
-import { StatsBgSvg } from "../../assets";
+import { secondary, StatsBgSvg } from "../../assets";
 import CountUp from "../../countUp/CountUp";
-
-
-
-
-
-
-
-
 
 const Section = styled.section`
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -49,36 +41,50 @@ const Row = styled.div`
   }
 `;
 
-const Div1 = styled.div`
-  flex: 0 0 auto;
-  width: 25%;
-  flex: 0 0 auto;
-  width: 50%;
-`;
+// const Div1 = styled.div`
+//   flex: 0 0 auto;
+//   width: 25%;
+//   flex: 0 0 auto;
+//   width: 50%;
+// `;
 
 const Div2 = styled.div`
-text-align: center;
-width: 100%;
-height: 100%;
-`
+  text-align: center;
+  width: 100%;
+  height: 100%;
+`;
+
+const Ptext = styled.p`
+  padding: 0;
+  margin: 0;
+  font-family: ${secondary};
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+`;
 
 const Clients = () => {
   return (
     <Section>
       <Container>
         <Row>
-          <Div1>
-            <Div2>
-              <CountUp end={232} timer={20} />
-              <p>Clients</p>
-            </Div2>
-          </Div1>
-          <Div1>
-            <Div2>
-              <CountUp end={521} timer={9} />
-              <p>Clients</p>
-            </Div2>
-          </Div1>
+          <Div2>
+            <CountUp end={232} timer={5} />
+            <Ptext>Clients</Ptext>
+          </Div2>
+
+          <Div2>
+            <CountUp end={521} timer={2} />
+            <Ptext>Projects</Ptext>
+          </Div2>
+          <Div2>
+            <CountUp end={1453} timer={2} />
+            <Ptext>Hours Of Support</Ptext>
+          </Div2>
+          <Div2>
+            <CountUp end={32} timer={20} />
+            <Ptext>Workers</Ptext>
+          </Div2>
         </Row>
       </Container>
     </Section>

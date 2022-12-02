@@ -1,10 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
+import styled from "styled-components";
 
 interface IProps {
   end: any;
   timer: number
 }
 
+
+const Number = styled.div`
+  font-size: 48px;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+`;
 const CountUp: React.FC<IProps> = ({ end, timer=50 }) => {
   const [state, setState] = useState(null);
   const ref = useRef(0);
@@ -31,7 +39,7 @@ const CountUp: React.FC<IProps> = ({ end, timer=50 }) => {
     return () => (isMounted = false);
   }, [end]);
 
-  return <div>{state}</div>;
+  return <Number>{state}</Number>;
 };
 
 export default CountUp;

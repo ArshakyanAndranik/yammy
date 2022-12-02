@@ -4,6 +4,7 @@ import Choose from "./components/Choose/Choose";
 import Clients from "./components/Clients/Clients";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
+import Menu from "./components/menu/Menu";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <About />
       <Choose />
       <Clients/>
+      <Menu/>
     </>
   );
 };
