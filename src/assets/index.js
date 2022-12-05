@@ -10,6 +10,24 @@ import gem from "./gem.svg";
 import inboxes from "./inboxes.svg";
 import statsBg from "./statsBg.jpg";
 
+// import images for menu
+import menu1 from "./menu/menu-item-1.png";
+import menu2 from "./menu/menu-item-2.png";
+import menu3 from "./menu/menu-item-3.png";
+import menu4 from "./menu/menu-item-4.png";
+import menu5 from "./menu/menu-item-5.png";
+import menu6 from "./menu/menu-item-6.png";
+
+// export images for menu
+export const menu1SVG = menu1;
+export const menu2SVG = menu2;
+export const menu3SVG = menu3;
+export const menu4SVG = menu4;
+export const menu5SVG = menu5;
+export const menu6SVG = menu6;
+
+
+
 export const ChervonSVG = chervon;
 export const PlayCircleSVG = playCircle;
 export const HeroSvg = hero;

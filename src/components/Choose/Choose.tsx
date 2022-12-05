@@ -38,9 +38,6 @@ const Row = styled.div`
     display: flex;
     flex-direction: column;
   }
-  /* @media (max-width: 767px) {
-    width: 280px;
-  } */
 `;
 
 const Container1 = styled.div``;
