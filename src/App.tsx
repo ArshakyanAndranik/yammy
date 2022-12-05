@@ -1,20 +1,30 @@
 import React from "react";
+import { useEffect } from "react";
 import About from "./components/about/About";
 import Choose from "./components/Choose/Choose";
 import Clients from "./components/Clients/Clients";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Menu from "./components/menu/Menu";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import ScrollToTop from "react-scroll-to-top";
 
 const App = () => {
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <Header />
       <Home />
       <About />
       <Choose />
-      <Clients/>
-      <Menu/>
+      <Clients />
+      <Menu />
+      <ScrollToTop smooth className="scroll-to-top" color="white"/>
     </>
   );
 };

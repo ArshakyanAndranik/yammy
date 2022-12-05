@@ -162,10 +162,10 @@ const Cont1 = styled.div`
 const Choose = () => {
   return (
     <Section id="why-us">
-      <Container>
+      <Container data-aos="fade-up">
         <Row>
           <Container2>
-            <Container1>
+            <Container1 data-aos="fade-up" data-aos-delay="100">
               <WhyBox>
                 <h3>Why Choose Yummy?</h3>
                 <p>
@@ -183,7 +183,7 @@ const Choose = () => {
               </WhyBox>
             </Container1>
             <Row>
-              <Cont>
+              <Cont data-aos="fade-up" data-aos-delay="200">
                 <Cont1>
                   <img src={ClipboardSvg} />
                   <h4>Corporis voluptates officia eiusmod</h4>
@@ -194,7 +194,7 @@ const Choose = () => {
                 </Cont1>
               </Cont>
 
-              <Cont>
+              <Cont data-aos="fade-up" data-aos-delay="200">
                 <Cont1>
                   <img src={GemSvg} />
                   <h4>Ullamco laboris ladore pan</h4>
@@ -205,7 +205,7 @@ const Choose = () => {
                 </Cont1>
               </Cont>
 
-              <Cont>
+              <Cont data-aos="fade-up" data-aos-delay="200">
                 <Cont1>
                   <img src={InboxesSvg} />
                   <h4>Labore consequatur incidid dolore</h4>

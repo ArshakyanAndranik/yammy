@@ -36,3 +36,4 @@ export const accentColors = {
   primary: "#ce1212",
   secondary: "#37373f",
 };
+

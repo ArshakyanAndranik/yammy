@@ -65,8 +65,8 @@ const Ptext = styled.p`
 
 const Clients = () => {
   return (
-    <Section>
-      <Container>
+    <Section >
+      <Container data-aos="zoom-out">
         <Row>
           <Div2>
             <CountUp end={232} timer={5} />

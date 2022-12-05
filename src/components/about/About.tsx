@@ -212,7 +212,7 @@ const Ahref = styled.a`
 const About = () => {
   return (
     <Section id="about">
-      <Container>
+      <Container data-aos="fade-up">
         <SectionHeader>
           <h2>About Us</h2>
           <p>
@@ -220,15 +220,14 @@ const About = () => {
           </p>
         </SectionHeader>
 
-
         <Row>
-          <Position>
+          <Position data-aos="fade-up" data-aos-delay="150">
             <CallUs>
               <h4>Book a Table</h4>
               <p>+38 098 377 07 77</p>
             </CallUs>
           </Position>
-          <Content>
+          <Content data-aos="fade-up" data-aos-delay="300">
             <p className="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.

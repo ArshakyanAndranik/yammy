@@ -105,16 +105,16 @@ const Home = () => {
       <Container>
         <Wrapper>
           <NoName>
-            <Info>
+            <Info data-aos="fade-up">
               Enjoy Your Healthy
               <br />
               Delicious Food
             </Info>
-            <Paragraph>
+            <Paragraph data-aos="fade-up" data-aos-delay="100">
               Sed autem laudantium dolores. Voluptatem itaque ea consequatur
               eveniet. Eum quas beatae cumque eum quaerat.
             </Paragraph>
-            <Buttons>
+            <Buttons data-aos="fade-up" data-aos-delay="200">
               <Btn1 href="#book-a-table">Book a Table</Btn1>
               <Btn2 href="https://www.youtube.com/watch?v=LXb3EKWsInQ">
                 <ImgSvg style={{ marginBottom: "-10px" }} src={PlayCircleSVG} />
@@ -123,7 +123,7 @@ const Home = () => {
             </Buttons>
           </NoName>
           <div>
-            <ImgSvg src={HeroSvg} />
+            <ImgSvg src={HeroSvg} data-aos="zoom-out" data-aos-delay="300" />
           </div>
         </Wrapper>
       </Container>
