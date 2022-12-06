@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import {
   accentColors,
-  CheckSvg,
   defaultt,
   menu1SVG,
+  menu2SVG,
+  menu3SVG,
+  menu4SVG,
+  menu5SVG,
+  menu6SVG,
   primary,
   secondary,
 } from "../../assets";
@@ -32,6 +36,7 @@ const Container = styled.div`
 const SectionHeader = styled.div`
   text-align: center;
   padding-bottom: 30px;
+
   h2 {
     font-size: 13px;
     letter-spacing: 1px;
@@ -60,6 +65,7 @@ const Nav = styled.ul`
   margin-bottom: 0;
   list-style: none;
   border: 0;
+
 `;
 const Li = styled.li`
   color: ${accentColors.grey};
@@ -107,6 +113,7 @@ const Header = styled.div``;
 const TabHeader = styled.div`
   padding: 30px 0;
   text-align: center;
+  
   p {
     font-size: 14px;
     text-transform: uppercase;
@@ -123,10 +130,37 @@ const TabHeader = styled.div`
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
+
 `;
 const MenuItem = styled.div`
   -moz-text-align-last: center;
   text-align-last: center;
+  max-width: 300px;
+  text-align: center;
+  margin-left: 40px;
+  
+  h4 {
+    font-size: 22px;
+    font-weight: 500;
+    color: ${accentColors.secondary};
+    font-family: ${secondary};
+    font-weight: 30px;
+    margin-bottom: 5px;
+    margin-left: 90px;
+  }
+  h2 {
+    font-family: ${secondary};
+    color: #8d8d9b;
+    margin-bottom: 5px;
+    font-size: 16px;
+    margin-left: 50px;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 700;
+    color: ${accentColors.primary};
+    margin-left: 60px;
+  }
   img {
     padding: 0 60px;
     margin-bottom: 15px;
@@ -134,6 +168,7 @@ const MenuItem = styled.div`
     height: auto;
   }
 `;
+
 
 const Menu = () => {
   return (
@@ -146,16 +181,16 @@ const Menu = () => {
           </p>
         </SectionHeader>
         <Nav data-aos="fade-up" data-aos-delay="200">
-          <Link className="nav-link active show">
+          <Link className="active show">
             <h4>Starters</h4>
           </Link>
-          <Link className="nav-link">
+          <Link>
             <h4>Breakfast</h4>
           </Link>
-          <Link className="nav-link">
+          <Link>
             <h4>Lunch</h4>
           </Link>
-          <Link className="nav-link">
+          <Link>
             <h4>Dinner</h4>
           </Link>
         </Nav>
@@ -169,20 +204,53 @@ const Menu = () => {
         </Header>
         <Row>
           <MenuItem>
-                <a href="assets/img/menu/menu-item-1.png" 
-                className="glightbox">
-                <img src={menu1SVG} 
-                className="menu-img img-fluid" alt=""/>
-              </a>
-                <h4>Magnam Tiste</h4>
-                <p className="ingredients">
-                  Lorem, deren, trataro, filede, nerada
-                </p>
-                <p className="price">
-                  $5.95
-                </p>
+            <a>
+              <img src={menu1SVG} alt="" />
+            </a>
+            <h4>Magnam Tiste</h4>
+            <h2>Lorem, deren, trataro, filede, nerada</h2>
+            <p>$5.95</p>
           </MenuItem>
-          
+          <MenuItem>
+            <a href="assets/img/menu/menu-item-1.png">
+              <img src={menu2SVG} alt="" />
+            </a>
+            <h4>Aut Luia</h4>
+            <h2>Lorem, deren, trataro, filede, nerada</h2>
+            <p>$14.95</p>
+          </MenuItem>
+          <MenuItem>
+            <a href="assets/img/menu/menu-item-1.png">
+              <img src={menu3SVG} alt="" />
+            </a>
+            <h4>Est Eligendi</h4>
+            <h2>Lorem, deren, trataro, filede, nerada</h2>
+            <p>$8.95</p>
+          </MenuItem>
+          <MenuItem>
+            <a href="assets/img/menu/menu-item-1.png">
+              <img src={menu4SVG} alt="" />
+            </a>
+            <h4>Eos Luibusdam</h4>
+            <h2>Lorem, deren, trataro, filede, nerada</h2>
+            <p>$12.95</p>
+          </MenuItem>
+          <MenuItem>
+            <a href="assets/img/menu/menu-item-1.png">
+              <img src={menu5SVG} alt="" />
+            </a>
+            <h4>Eos Luibusdam</h4>
+            <h2>Lorem, deren, trataro, filede, nerada</h2>
+            <p>$12.95</p>
+          </MenuItem>
+          <MenuItem>
+            <a href="assets/img/menu/menu-item-1.png">
+              <img src={menu6SVG} alt="" />
+            </a>
+            <h4>Laboriosam Direva</h4>
+            <h2>Lorem, deren, trataro, filede, nerada</h2>
+            <p>$9.95</p>
+          </MenuItem>
         </Row>
       </Container>
     </section>
