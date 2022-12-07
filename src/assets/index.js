@@ -32,6 +32,11 @@ import events1 from "./event/events1.jpg";
 import events2 from "./event/events2.jpg";
 import events3 from "./event/events3.jpg";
 
+// import images for chefs
+import chefs1 from "./chefs/chefs1.jpg";
+import chefs2 from "./chefs/chefs3.jpg";
+import chefs3 from "./chefs/chefs3.jpg";
+
 // export images for menu
 export const menu1SVG = menu1;
 export const menu2SVG = menu2;
@@ -48,6 +53,14 @@ export const testimonials4SVG = testimonials4;
 export const events1SVG = events1;
 export const events2SVG = events2;
 export const events3SVG = events3;
+// export images for chefs
+export const chefs1SVG = chefs1;
+export const chefs2SVG = chefs2;
+export const chefs3SVG = chefs3;
+
+
+
+
 
 export const ChervonSVG = chervon;
 export const PlayCircleSVG = playCircle;

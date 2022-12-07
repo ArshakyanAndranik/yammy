@@ -7,23 +7,37 @@ import {
   events3SVG,
   primary,
 } from "../../assets";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
-
-// import "./styles.css";
-
-// import required modules
-import { Pagination } from "swiper";
-
+import "swiper/css";
+import "swiper/css/free-mode";
 
 const Section = styled.section``;
+
+
 const Container = styled.div`
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
 `;
+
 const SectionHeader = styled.div`
   text-align: center;
   padding-bottom: 30px;
@@ -147,12 +161,18 @@ const Events = () => {
         </SectionHeader>
         <Slides data-aos="fade-up" data-aos-delay="100">
           <Swiper
-            slidesPerView={"auto"}
             spaceBetween={30}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
             <SwiperR>

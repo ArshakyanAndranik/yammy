@@ -12,10 +12,9 @@ import ScrollToTop from "react-scroll-to-top";
 import Testimonials from "./components/testimonials/Testimonials";
 import Events from "./components/eventsM/Events";
 import Contacts from "./components/contact/Contact";
-
+import Chefs from "./components/Chefs/Chefs";
 
 const App = () => {
-
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -28,10 +27,10 @@ const App = () => {
       <Choose />
       <Clients />
       <Menu />
-      <Testimonials/>
-      <Events/>
-      <Contacts/>
-      <ScrollToTop smooth className="scroll-to-top" color="white"/>
+      <Testimonials />
+      <Events />
+      <Chefs />
+      <ScrollToTop smooth className="scroll-to-top" color="white" />
     </>
   );
 };
