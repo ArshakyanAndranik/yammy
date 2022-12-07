@@ -10,6 +10,9 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import ScrollToTop from "react-scroll-to-top";
 import Testimonials from "./components/testimonials/Testimonials";
+import Events from "./components/eventsM/Events";
+import Contacts from "./components/contact/Contact";
+
 
 const App = () => {
 
@@ -26,6 +29,8 @@ const App = () => {
       <Clients />
       <Menu />
       <Testimonials/>
+      <Events/>
+      <Contacts/>
       <ScrollToTop smooth className="scroll-to-top" color="white"/>
     </>
   );

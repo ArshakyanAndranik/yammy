@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import { accentColors, defaultt, primary, QuoteSvg, secondary, StarSvg, testimonials1SVG, testimonials2SVG, testimonials3SVG, testimonials4SVG } from "../../assets";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
-import { FreeMode } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 
@@ -151,6 +149,7 @@ const Testimonials = () => {
                   </ImageDiv>
                 </JustifyDiv>
               </SwiperSlide>
+
               <SwiperSlide>
                 <JustifyDiv>
                   <FlexDiv>
@@ -177,6 +176,8 @@ const Testimonials = () => {
                   </ImageDiv>
                 </JustifyDiv>
               </SwiperSlide>
+
+
               <SwiperSlide>
                 <JustifyDiv>
                   <FlexDiv>
@@ -203,6 +204,8 @@ const Testimonials = () => {
                   </ImageDiv>
                 </JustifyDiv>
               </SwiperSlide>
+
+              
               <SwiperSlide>
                 <JustifyDiv>
                   <FlexDiv>

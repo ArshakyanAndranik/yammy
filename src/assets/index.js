@@ -27,6 +27,11 @@ import testimonials2 from "./testimonials/testimonials2.jpg";
 import testimonials3 from "./testimonials/testimonials3.jpg";
 import testimonials4 from "./testimonials/testimonials4.jpg";
 
+// import images for event
+import events1 from "./event/events1.jpg";
+import events2 from "./event/events2.jpg";
+import events3 from "./event/events3.jpg";
+
 // export images for menu
 export const menu1SVG = menu1;
 export const menu2SVG = menu2;
@@ -39,6 +44,10 @@ export const testimonials1SVG = testimonials1;
 export const testimonials2SVG = testimonials2;
 export const testimonials3SVG = testimonials3;
 export const testimonials4SVG = testimonials4;
+// export images for menu
+export const events1SVG = events1;
+export const events2SVG = events2;
+export const events3SVG = events3;
 
 export const ChervonSVG = chervon;
 export const PlayCircleSVG = playCircle;
