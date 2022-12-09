@@ -11,6 +11,7 @@ import inboxes from "./inboxes.svg";
 import quote from "./quote.svg";
 import star from "./star.svg";
 import statsBg from "./statsBg.jpg";
+import teamShape from "./teamShape.svg";
 
 
 // import images for menu
@@ -37,6 +38,13 @@ import chefs1 from "./chefs/chefs1.jpg";
 import chefs2 from "./chefs/chefs3.jpg";
 import chefs3 from "./chefs/chefs3.jpg";
 
+// import images for social network
+import facebook from "./socialNetwork/facebook.svg";
+import instagram from "./socialNetwork/instagram.svg";
+import linkedin from "./socialNetwork/linkedin.svg";
+import twitter from "./socialNetwork/twitter.svg";
+
+
 // export images for menu
 export const menu1SVG = menu1;
 export const menu2SVG = menu2;
@@ -57,7 +65,12 @@ export const events3SVG = events3;
 export const chefs1SVG = chefs1;
 export const chefs2SVG = chefs2;
 export const chefs3SVG = chefs3;
+// export images for social network
 
+export const FCSVG = facebook;
+export const INSVG = instagram;
+export const LNSVG = linkedin;
+export const TWSVG = twitter;
 
 
 
@@ -74,6 +87,7 @@ export const InboxesSvg = inboxes;
 export const StatsBgSvg = statsBg;
 export const QuoteSvg = quote;
 export const StarSvg = star;
+export const TeamShapeSvg = teamShape;
 
 // Fonts
 export const defaultt =
