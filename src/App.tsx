@@ -13,6 +13,7 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Events from "./components/eventsM/Events";
 import Contacts from "./components/contact/Contact";
 import Chefs from "./components/Chefs/Chefs";
+import BookATable from "./components/bookTable/BookATable";
 
 const App = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const App = () => {
       <Testimonials />
       <Events />
       <Chefs />
+      <BookATable/>
       <ScrollToTop smooth className="scroll-to-top" color="white" />
     </>
   );

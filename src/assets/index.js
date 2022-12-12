@@ -11,6 +11,7 @@ import inboxes from "./inboxes.svg";
 import quote from "./quote.svg";
 import star from "./star.svg";
 import statsBg from "./statsBg.jpg";
+import reservation from "./reservation.jpg";
 import teamShape from "./teamShape.svg";
 
 
@@ -88,6 +89,8 @@ export const StatsBgSvg = statsBg;
 export const QuoteSvg = quote;
 export const StarSvg = star;
 export const TeamShapeSvg = teamShape;
+export const ReservationSvg = reservation;
+
 
 // Fonts
 export const defaultt =
