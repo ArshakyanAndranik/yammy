@@ -4,6 +4,7 @@ import {
   accentColors,
   chefs1SVG,
   chefs2SVG,
+  chefs3SVG,
   defaultt,
   FCSVG,
   INSVG,
@@ -36,7 +37,7 @@ const Container = styled.div`
     max-width: 1320px;
   }
 `;
-const SelectionNeader = styled.div`
+const SectionHeader = styled.div`
   text-align: center;
   padding-bottom: 30px;
   h2 {
@@ -65,12 +66,15 @@ const Row = styled.div`
 `;
 
 const Collg = styled.div`
-  flex: 0 0 auto;
-  width: 33.33333333%;
-  flex: 0 0 auto;
-  width: 50%;
   display: flex;
   align-items: stretch;
+  flex: 0 0 auto;
+  margin: 0 auto;
+  width: 33.33333333%;
+  width: 31%;
+  /* @media (min-width: 768px) {
+    width: 50%;
+  } */
 `;
 const ChefMember = styled.div`
   overflow: hidden;
@@ -79,6 +83,14 @@ const ChefMember = styled.div`
   background: #fff;
   box-shadow: 0px 0 30px rgba(55, 55, 63, 0.08);
   transition: 0.3s;
+  :hover {
+    transform: scale(1.08);
+    box-shadow: 0px 0 30px rgba(55, 55, 63, 0.15);
+    .social {
+      right: 8px;
+      opacity: 1;
+    }
+  }
 `;
 
 const MemberImg = styled.div`
@@ -143,42 +155,65 @@ const MemberInfo = styled.div`
     line-height: 26px;
     color: rgba(33, 37, 41, 0.7);
   }
-  :hover {
-    transform: scale(1.08);
-    box-shadow: 0px 0 30px rgba(55, 55, 63, 0.15);
-    .social {
-      right: 8px;
-      opacity: 1;
-    }
-  }
 `;
 
 const Chefs = () => {
   return (
     <Section id="chefs">
       <Container data-aos="fade-up">
-        <SelectionNeader>
+        <SectionHeader>
           <h2>Chefs</h2>
           <p>
             Our <span>Proffesional</span> Chefs
           </p>
-        </SelectionNeader>
+        </SectionHeader>
+
         <Row>
           <Collg data-aos="fade-up" data-aos-delay="100">
             <ChefMember>
               <MemberImg>
                 <ChefImg src={chefs1SVG} />
                 <Social className="social">
-                  <a>
+                  <a href="">
                     <img src={TWSVG} />
                   </a>
-                  <a>
+                  <a href="">
                     <img src={FCSVG} />
                   </a>
-                  <a>
+                  <a href="">
                     <img src={INSVG} />
                   </a>
-                  <a>
+                  <a href="">
+                    <img src={LNSVG} />
+                  </a>
+                </Social>
+              </MemberImg>
+              <MemberInfo>
+                <h4>Walter White</h4>
+                <span>Master Chef</span>
+                <p>
+                  Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
+                  tenetur ipsa quae aut. Ipsum exercitationem iure minima enim
+                  corporis et voluptate.
+                </p>
+              </MemberInfo>
+            </ChefMember>
+          </Collg>
+          <Collg data-aos="fade-up" data-aos-delay="100">
+            <ChefMember>
+              <MemberImg>
+                <ChefImg src={chefs2SVG} />
+                <Social className="social">
+                  <a href="">
+                    <img src={TWSVG} />
+                  </a>
+                  <a href="">
+                    <img src={FCSVG} />
+                  </a>
+                  <a href="">
+                    <img src={INSVG} />
+                  </a>
+                  <a href="">
                     <img src={LNSVG} />
                   </a>
                 </Social>
@@ -190,6 +225,36 @@ const Chefs = () => {
                   Quo esse repellendus quia id. Est eum et accusantium pariatur
                   fugit nihil minima suscipit corporis. Voluptate sed quas
                   reiciendis animi neque sapiente.
+                </p>
+              </MemberInfo>
+            </ChefMember>
+          </Collg>
+          <Collg data-aos="fade-up" data-aos-delay="100">
+            <ChefMember>
+              <MemberImg>
+                <ChefImg src={chefs3SVG} />
+                <Social className="social">
+                  <a href="">
+                    <img src={TWSVG} />
+                  </a>
+                  <a href="">
+                    <img src={FCSVG} />
+                  </a>
+                  <a href="">
+                    <img src={INSVG} />
+                  </a>
+                  <a href="">
+                    <img src={LNSVG} />
+                  </a>
+                </Social>
+              </MemberImg>
+              <MemberInfo>
+                <h4>William Anderson</h4>
+                <span>Cook</span>
+                <p>
+                  Vero omnis enim consequatur. Voluptas consectetur unde qui
+                  molestiae deserunt. Voluptates enim aut architecto porro
+                  aspernatur molestiae modi.
                 </p>
               </MemberInfo>
             </ChefMember>

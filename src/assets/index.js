@@ -35,7 +35,7 @@ import events3 from "./event/events3.jpg";
 
 // import images for chefs
 import chefs1 from "./chefs/chefs1.jpg";
-import chefs2 from "./chefs/chefs3.jpg";
+import chefs2 from "./chefs/chefs2.jpg";
 import chefs3 from "./chefs/chefs3.jpg";
 
 // import images for social network
