@@ -49,7 +49,9 @@ const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
-
+  @media (max-width: 992px) {
+    display: block;
+  }
 `;
 
 const Collg4 = styled.div`
@@ -60,6 +62,9 @@ const Collg4 = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url(${ReservationSvg});
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 `;
 const Collg8 = styled.div`
   flex: 0 0 auto;
@@ -67,7 +72,9 @@ const Collg8 = styled.div`
   display: flex;
   align-items: center;
   background: rgba(55, 55, 63, 0.04);
-  
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 `;
 
 const Form = styled.form`
@@ -84,12 +91,17 @@ const Rowgy4 = styled.div`
 const Collg4colmd6 = styled.div`
   flex: 0 0 auto;
   width: 33.33333333%;
-
-  /* width: 50%; */
+  @media (max-width: 992px) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const Input = styled.input`
   display: block;
-  width: 100%;
+  width: 75%;
+  margin-top: 20px;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -103,6 +115,12 @@ const Input = styled.input`
   appearance: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   padding: 12px 15px;
+  @media (max-width: 992px) {
+    width: 83%;
+  }
+  @media (max-width: 768px) {
+    width: 91.5%;
+  }
   :hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
     background-color: #dde0e3;
   }
@@ -123,7 +141,6 @@ const Input = styled.input`
     background-color: #fff;
     border-color: red;
     outline: 0;
-
   }
   ::-webkit-date-and-time-value {
     height: 1.5em;
@@ -189,7 +206,7 @@ const Formgroupmt3 = styled.div`
 
 const Textarea = styled.textarea`
   display: block;
-  width: 100%;
+  width: 91.5%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
