@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import { ChervonSVG, secondary } from "../../assets";
 import styled from "styled-components";
 import { accentColors } from "../../assets";
-// import "./header.css";
 
 const Wrapper = styled.header`
   position: fixed;
@@ -38,7 +38,6 @@ const Logo = styled.a`
     font-family: ${secondary};
   }
 `;
-
 const Book = styled.a`
   font-size: 14px;
   color: ${accentColors.white};
@@ -85,29 +84,80 @@ const Icon2 = styled.i`
   top: 20px;
   z-index: 9999;
 `;
+
+const StyledBurger = styled.div`
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 20;
+  display: none;
+
+  @media (max-width: 1279px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: ${
+      // @ts-ignore
+      ({ open }) => (open ? "#ccc" : "#333")
+    };
+    border-radius: 10px;
+    transform-origin: 1px;
+    transition: all 0.3s linear;
+
+    &:nth-child(1) {
+      transform: ${
+        // @ts-ignore
+        ({ open }) => (open ? "rotate(45deg)" : "rotate(0)")
+      };
+    }
+
+    &:nth-child(2) {
+      transform: ${
+        // @ts-ignore
+        ({ open }) => (open ? "translateX(100%)" : "translateX(0)")
+      };
+      opacity: ${
+        // @ts-ignore
+        ({ open }) => (open ? 0 : 1)
+      };
+    }
+
+    &:nth-child(3) {
+      transform: ${
+        // @ts-ignore
+        ({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")
+      };
+    }
+  }
+`;
 const Navbar = styled.nav`
-  @media (min-width: 1280px) {
+  /* padding: 0; */
+  ul {
+    margin: 0;
     padding: 0;
-    ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      list-style: none;
-      align-items: center;
-    }
-    li {
-      position: relative;
-    }
-    > ul > li {
-      white-space: nowrap;
-      padding: 10px 0 10px 28px;
-    }
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  li {
+    position: relative;
+  }
+  > ul > li {
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+  }
     a {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 3px;
-      /* font-family: var(--font-secondary); */
       font-size: 16px;
       font-weight: 600;
       color: ${accentColors.grey};
@@ -115,202 +165,154 @@ const Navbar = styled.nav`
       transition: 0.3s;
       position: relative;
     }
-    a:focus {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 3px;
-      font-family: var(--font-secondary);
-      font-size: 16px;
-      font-weight: 600;
-      color: #7f7f90;
-      white-space: nowrap;
-      transition: 0.3s;
-      position: relative;
-    }
-    a {
-      i {
-        font-size: 12px;
-        line-height: 0;
-        margin-left: 5px;
-      }
-    }
-    a:focus {
-      i {
-        font-size: 12px;
-        line-height: 0;
-        margin-left: 5px;
-      }
-    }
-    > ul > li a:before {
-      content: "";
+  > ul > li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: ${accentColors.primary};
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  li:hover > a:before {
+    visibility: visible;
+    width: 100%;
+  }
+  .dropdown {
+    ul {
+      display: block;
       position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -6px;
-      left: 0;
-      background-color: ${accentColors.primary};
+      left: 28px;
+      top: calc(100% + 30px);
+      margin: 0;
+      padding: 10px 0;
+      z-index: 99;
+      opacity: 0;
       visibility: hidden;
-      width: 0px;
-      transition: all 0.3s ease-in-out 0s;
-    }
-    a:hover:before {
-      visibility: visible;
-      width: 100%;
-    }
-    li:hover > a:before {
-      visibility: visible;
-      width: 100%;
-    }
-    .active:before {
-      visibility: visible;
-      width: 100%;
-    }
-    a:hover {
-      color: ${accentColors.black};
-    }
-    .active {
-      color: ${accentColors.black};
-    }
-    .active:focus {
-      color: ${accentColors.black};
-    }
-    li:hover > a {
-      color: ${accentColors.black};
-    }
-    .dropdown {
-      ul {
-        display: block;
-        position: absolute;
-        left: 28px;
-        top: calc(100% + 30px);
-        margin: 0;
-        padding: 10px 0;
-        z-index: 99;
-        opacity: 0;
-        visibility: hidden;
-        background: ${accentColors.white};
-        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-        transition: 0.3s;
-        border-radius: 4px;
-        li {
-          min-width: 200px;
+      background: ${accentColors.white};
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+      transition: 0.3s;
+      border-radius: 4px;
+      li {
+        min-width: 200px;
+      }
+      a {
+        padding: 10px 20px;
+        font-size: 15px;
+        text-transform: none;
+        font-weight: 600;
+        i {
+          font-size: 12px;
         }
+      }
+      .dropdown {
+        ul {
+          a:hover {
+            color: ${accentColors.primary};
+          }
+        }
+        ul {
+          .active:hover {
+            color: ${accentColors.primary};
+          }
+        }
+
+        ul {
+          li:hover > a {
+            color: ${accentColors.primary};
+          }
+        }
+      }
+      .dropdown:hover > ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+      }
+      .dropdown {
+        .dropdown {
+          ul {
+            top: 0;
+            left: calc(100% - 30px);
+            visibility: hidden;
+          }
+        }
+      }
+
+      .dropdown {
+        .dropdown:hover > ul {
+          opacity: 1;
+          top: 0;
+          left: 100%;
+          visibility: visible;
+        }
+      }
+
+      .active {
+        :hover {
+          color: ${accentColors.primary};
+        }
+      }
+      li {
+        min-width: 200px;
+
         a {
           padding: 10px 20px;
           font-size: 15px;
           text-transform: none;
           font-weight: 600;
+          :hover {
+            color: "#ce1212";
+          }
           i {
             font-size: 12px;
           }
         }
-        .dropdown {
-          ul {
-            a:hover {
-              color: ${accentColors.primary};
-            }
-          }
-          ul {
-            .active:hover {
-              color: ${accentColors.primary};
-            }
-          }
-
-          ul {
-            li:hover > a {
-              color: ${accentColors.primary};
-            }
-          }
-        }
-        .dropdown:hover > ul {
-          opacity: 1;
-          top: 100%;
-          visibility: visible;
-        }
-        .dropdown {
-          .dropdown {
-            ul {
-              top: 0;
-              left: calc(100% - 30px);
-              visibility: hidden;
-            }
-          }
-        }
-
-        .dropdown {
-          .dropdown:hover > ul {
-            opacity: 1;
-            top: 0;
-            left: 100%;
-            visibility: visible;
-          }
-        }
-
-        .active {
-          :hover {
-            color: ${accentColors.primary};
-          }
-        } 
-         li {
-          min-width: 200px;
-
-          a {
-            padding: 10px 20px;
-            font-size: 15px;
-            text-transform: none;
-            font-weight: 600;
-            :hover {
-              color: "#ce1212";
-            }
-            i {
-              font-size: 12px;
-            }
-          }
-        }
       }
     }
+  }
+  .dropdown {
+    ul {
+      li:hover > a {
+        color: "#ce1212";
+      }
+    }
+  }
+  .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  .dropdown {
     .dropdown {
       ul {
-        li:hover > a {         
-              color: "#ce1212";
-        }
+        top: 0;
+        left: calc(100% - 30px);
+        visibility: hidden;
       }
     }
-    .dropdown:hover > ul {
+  }
+  .dropdown {
+    .dropdown :hover > ul {
       opacity: 1;
-      top: 100%;
+      top: 0;
+      left: 100%;
       visibility: visible;
     }
-    .dropdown {
-      .dropdown {
-        ul {
-          top: 0;
-          left: calc(100% - 30px);
-          visibility: hidden;
-        }
-      }
-    }
-    .dropdown {
-      .dropdown :hover > ul {
-        opacity: 1;
-        top: 0;
-        left: 100%;
-        visibility: visible;
-      }
-    }
+  }
 
+  .dropdown {
     .dropdown {
-      .dropdown {
-        ul {
-          left: -90%;
-        }
+      ul {
+        left: -90%;
       }
     }
-    .dropdown {
-      .dropdown:hover > ul {
-        left: -100%;
-      }
+  }
+  .dropdown {
+    .dropdown:hover > ul {
+      left: -100%;
     }
   }
 
@@ -318,16 +320,23 @@ const Navbar = styled.nav`
     position: fixed;
     top: 0;
     right: -100%;
-    width: 100%;
-    max-width: 400px;
-    border-left: 1px solid #666;
-    bottom: 0;
-    transition: 0.3s;
-    z-index: 9997;
+
+
+    transform: ${
+      // @ts-ignore
+      ({ open }) => (open ? "translateX(0)" : "translateX(100%)")
+    };
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
     ul {
       position: absolute;
       inset: 0;
-      padding: 50px 0 10px 0;
+      flex-flow: column nowrap;
+      padding: 10px 0 10px 0;
       margin: 0;
       background: rgba(255, 255, 255, 0.9);
       overflow-y: auto;
@@ -339,7 +348,6 @@ const Navbar = styled.nav`
       align-items: center;
       justify-content: space-between;
       padding: 10px 20px;
-      /* font-family: var(--font-secondary); */
       border-bottom: 2px solid rgba(255, 255, 255, 0.8);
       font-size: 16px;
       font-weight: 600;
@@ -438,6 +446,7 @@ const Navbar = styled.nav`
 `;
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
   return (
     <Wrapper>
       <Container>
@@ -446,7 +455,15 @@ const Header = () => {
             Yummy<span>.</span>
           </h1>
         </Logo>
-        <Navbar>
+        {/* @ts-ignore */}
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
+        {/* @ts-ignore */}
+        <Navbar open={open}>
+          {/* @ts-ignore */}
           <ul>
             <li>
               <a href="#hero">Home</a>
