@@ -14,6 +14,8 @@ import Events from "./components/eventsM/Events";
 import Contacts from "./components/contact/Contact";
 import Chefs from "./components/Chefs/Chefs";
 import BookATable from "./components/bookTable/BookATable";
+import Footer from "./components/footer/Footer";
+import Contact from "./components/contact/Contact";
 
 const App = () => {
   useEffect(() => {
@@ -32,6 +34,8 @@ const App = () => {
       <Events />
       <Chefs />
       <BookATable/>
+      <Contact/>
+      <Footer/>
       <ScrollToTop smooth className="scroll-to-top" color="white" />
     </>
   );

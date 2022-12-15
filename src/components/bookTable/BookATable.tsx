@@ -87,6 +87,7 @@ const Form = styled.form`
 const Rowgy4 = styled.div`
   display: flex;
   flex-wrap: wrap;
+
 `;
 const Collg4colmd6 = styled.div`
   flex: 0 0 auto;

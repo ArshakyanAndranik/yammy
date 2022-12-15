@@ -13,7 +13,7 @@ import star from "./star.svg";
 import statsBg from "./statsBg.jpg";
 import reservation from "./reservation.jpg";
 import teamShape from "./teamShape.svg";
-
+import geoAlt from "./geoAlt.svg";
 
 // import images for menu
 import menu1 from "./menu/menu-item-1.png";
@@ -44,7 +44,11 @@ import facebook from "./socialNetwork/facebook.svg";
 import instagram from "./socialNetwork/instagram.svg";
 import linkedin from "./socialNetwork/linkedin.svg";
 import twitter from "./socialNetwork/twitter.svg";
-
+// import images for contactUs
+import envelopeFill from "./contactUs/envelopeFill.svg";
+import map from "./contactUs/map.svg";
+import shareFill from "./contactUs/shareFill.svg";
+import telephone from "./contactUs/telephone.svg";
 
 // export images for menu
 export const menu1SVG = menu1;
@@ -67,12 +71,15 @@ export const chefs1SVG = chefs1;
 export const chefs2SVG = chefs2;
 export const chefs3SVG = chefs3;
 // export images for social network
-
 export const FCSVG = facebook;
 export const INSVG = instagram;
 export const LNSVG = linkedin;
 export const TWSVG = twitter;
-
+// export images for contactUs
+export const EnvelopeFillSVG = envelopeFill;
+export const MapSVG = map;
+export const ShareFillSVG = shareFill;
+export const TelephoneSVG = telephone;
 
 
 
@@ -90,7 +97,7 @@ export const QuoteSvg = quote;
 export const StarSvg = star;
 export const TeamShapeSvg = teamShape;
 export const ReservationSvg = reservation;
-
+export const GeoAltSvg = geoAlt;
 
 // Fonts
 export const defaultt =
