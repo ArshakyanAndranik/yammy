@@ -14,6 +14,7 @@ import statsBg from "./statsBg.jpg";
 import reservation from "./reservation.jpg";
 import teamShape from "./teamShape.svg";
 import geoAlt from "./geoAlt.svg";
+import clock from "./clock.svg";
 
 // import images for menu
 import menu1 from "./menu/menu-item-1.png";
@@ -98,6 +99,8 @@ export const StarSvg = star;
 export const TeamShapeSvg = teamShape;
 export const ReservationSvg = reservation;
 export const GeoAltSvg = geoAlt;
+export const СlockSvg = clock;
+
 
 // Fonts
 export const defaultt =
