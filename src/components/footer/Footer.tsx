@@ -6,6 +6,9 @@ const Footers = styled.footer`
   background-color: #1f1f24;
   padding: 50px 0;
   color: rgba(255, 255, 255, 0.7);
+  /* @media (max-width: 992px) {
+    max-width: 960px;
+  } */
   h4 {
     font-size: 16px;
     font-weight: bold;
@@ -36,20 +39,41 @@ const Container = styled.div`
 const Rowgy3 = styled.div`
   display: flex;
   flex-wrap: wrap;
+
 `;
 const Collz3colmd6 = styled.div`
   display: flex;
   justify-content: space-between;
   flex: 0 0 auto;
   margin-bottom: 30px;
+  width: 23%;
   /* width: 25%; */
-  @media (min-width: 992px) {
+  /* @media (min-width: 992px) {
     flex: 0 0 auto;
     width: 23%;
-  }
+  } */
   img {
     margin-left: 55px;
     margin-top: -50px;
+  }
+  @media (max-width: 1200px) {
+    img {
+      margin-left: 20px;
+    }
+  }
+  @media (max-width: 992px) {
+    width: 50%;
+    margin-left: 100px;
+  }
+  @media (max-width: 768px) {
+    img {
+      margin-left: 0px;
+    }
+  }
+  @media (max-width: 576px) {
+    img {
+      margin-left: 0px;
+    }
   }
 `;
 const Collz3colmd7 = styled.div`
