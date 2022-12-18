@@ -63,6 +63,9 @@ const SectionHeader = styled.div`
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 390px) {
+    flex-direction: column;
+  }
 `;
 
 const Collg = styled.div`
@@ -72,9 +75,10 @@ const Collg = styled.div`
   margin: 0 auto;
   width: 33.33333333%;
   width: 31%;
-  /* @media (min-width: 768px) {
-    width: 50%;
-  } */
+  @media (max-width: 390px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 `;
 const ChefMember = styled.div`
   overflow: hidden;
