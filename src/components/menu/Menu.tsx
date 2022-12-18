@@ -138,7 +138,9 @@ const MenuItem = styled.div`
   max-width: 300px;
   text-align: center;
   margin-left: 40px;
-  
+  @media (max-width: 390px) {
+    margin-left: 0px;
+  }
   h4 {
     font-size: 22px;
     font-weight: 500;
@@ -147,6 +149,9 @@ const MenuItem = styled.div`
     font-weight: 30px;
     margin-bottom: 5px;
     margin-left: 90px;
+    @media (max-width: 390px) {
+      margin-left: 110px;
+    }
   }
   h2 {
     font-family: ${secondary};
@@ -154,12 +159,18 @@ const MenuItem = styled.div`
     margin-bottom: 5px;
     font-size: 16px;
     margin-left: 50px;
+    @media (max-width: 390px) {
+      margin-left: 110px;
+    }
   }
   p {
     font-size: 24px;
     font-weight: 700;
     color: ${accentColors.primary};
     margin-left: 60px;
+    @media (max-width: 390px) {
+      margin-left: 110px;
+    }
   }
   img {
     padding: 0 60px;
