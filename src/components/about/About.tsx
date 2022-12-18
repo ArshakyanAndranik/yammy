@@ -87,7 +87,9 @@ const Row = styled.div`
   display: flex;
   @media (max-width: 992px) {
     flex-direction: column;
-
+    .fst-italic {
+      margin-top: 50px;
+    }
   }
 `;
 
@@ -158,6 +160,7 @@ const Content = styled.div`
   }
   p {
     font-style: italic !important;
+
   }
 `;
 
