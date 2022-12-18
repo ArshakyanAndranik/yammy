@@ -89,6 +89,9 @@ const Container2 = styled.div`
   @media (max-width: 880px) {
     flex-direction: column;
   }
+  @media (max-width: 390px) {
+    margin-right: 60px;
+  }
 `;
 
 const Cont = styled.div`
