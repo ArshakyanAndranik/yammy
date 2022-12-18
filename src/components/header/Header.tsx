@@ -27,6 +27,9 @@ const Logo = styled.a`
   color: ${accentColors.default};
   margin: 0;
   margin-left: 140px;
+  @media (max-width: 390px) {
+    margin-left: 0px;
+  }
   span {
     color: ${accentColors.primary};
   }

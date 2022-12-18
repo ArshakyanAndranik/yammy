@@ -2,15 +2,19 @@ import styled from "styled-components";
 import { AboutSvg, AboutSvg2, accentColors, CheckSvg, defaultt, primary } from "../../assets";
 
 const Section = styled.section`
-
-
+  /* @media (max-width: 860px) {
+    margin-left: -40px;
+  }
+  @media (max-width: 768px) {
+    margin-left: -180px;
+  } */
 `;
 const Container = styled.div`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   @media (min-width: 576px) {
-    max-width: 540px;
+    max-width: 540px; 
   }
   @media (min-width: 768px) {
     max-width: 720px;
@@ -48,20 +52,7 @@ const SectionHeader = styled.div`
     }
   }
 `;
-const Position = styled.div`
-  position: relative;
-  background-image: url(${AboutSvg});
-  background-repeat: no-repeat;
-  min-height: 750px;
-  width: 760px;
-  margin-right: 100px;
-  @media (max-width: 992px) {
-    margin-left: 0px;
-  }
-  @media (max-width: 900px) {
-    width: 660px;
-  }
-`;
+
 const CallUs = styled.div`
   position: absolute;
   left: 10%;
@@ -71,6 +62,11 @@ const CallUs = styled.div`
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
   padding: 20px;
   text-align: center;
+  @media (max-width: 576px) {
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+  }
   h4 {
     font-size: 24px;
     font-weight: 700;
@@ -81,21 +77,69 @@ const CallUs = styled.div`
     font-size: 28px;
     font-weight: 700;
     color: ${accentColors.primary};
+    @media (max-width: 576px) {
+      font-size: 20px;
+      font-weight: 500;
+    }
   }
 `;
 const Row = styled.div`
   display: flex;
   @media (max-width: 992px) {
     flex-direction: column;
+
   }
 `;
+
+
+const Position = styled.div`
+  position: relative;
+  background-image: url(${AboutSvg});
+  background-repeat: no-repeat;
+  min-height: 750px;
+  width: 760px;
+  margin-right: 100px;
+  @media (max-width: 992px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 768px) {
+    width: 600px;
+    margin-left: -10px;
+  }
+  @media (max-width: 576px) {
+    width: 450px;
+    margin-left: 20px;
+    min-height: 500px;
+  }
+  @media (max-width: 390px) {
+    width: 350px;
+    margin-left: 20px;
+    min-height: 400px;
+  }
+`;
+
+
+
 const Content = styled.div`
   min-height: 750px;
   margin-top: -20px;
   width: 660px;
-  /* @media (max-width: 992px) {
+  @media (max-width: 992px) {
     width: 760px;
-  } */
+  }
+  @media (max-width: 768px) {
+    width: 600px;
+    margin-left: -10px;
+  }
+  @media (max-width: 576px) {
+    width: 450px;
+    margin-left: 20px;
+  }
+  @media (max-width: 390px) {
+    width: 350px;
+    margin-left: 20px;
+  }
   ul {
     list-style: none;
     padding: 0;
@@ -117,16 +161,14 @@ const Content = styled.div`
   }
 `;
 
-
 const Relative = styled.div`
   position: relative;
   img {
     @media (max-width: 900px) {
-      width: 660px;
+      width: 100%;
     }
   }
 `;
-
 const Ahref = styled.a`
   width: 94px;
   height: 94px;
