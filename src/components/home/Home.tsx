@@ -45,17 +45,24 @@ const NoName = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  @media (max-width: 390px) {
+margin-left: 20px;
+  }
 `;
 
 const Info = styled.h2`
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 20px;
+
   color: ${accentColors.secondary};
   font-family: "Amatic SC", sans-serif;
   @media (max-width: 640px) {
     font-size: 36px;
+  }
+  @media (max-width: 390px) {
+    display: flex;
+    justify-content: center;
   }
 `;
 const Paragraph = styled.p`
@@ -64,6 +71,10 @@ const Paragraph = styled.p`
   /* margin-left: 70px; */
   margin-bottom: 30px;
   max-width: 400px;
+  @media (max-width: 390px) {
+  text-align:center;
+    
+  }
 `;
 const Buttons = styled.div`
   display: block !important;
@@ -97,6 +108,10 @@ const Btn2 = styled.a`
 const ImgSvg = styled.img`
   max-width: 100%;
   height: auto;
+  @media (max-width: 390px) {
+    max-width: 90%;
+    margin-left: 20px;
+  }
 `;
 
 const Home = () => {
