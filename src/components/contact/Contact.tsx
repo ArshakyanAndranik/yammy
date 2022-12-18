@@ -161,6 +161,9 @@ const Colxl6 = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
+  @media (max-width: 390px) {
+    width: 87%;
+  }
 `;
 
 const Input = styled.input`
