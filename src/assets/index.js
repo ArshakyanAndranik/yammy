@@ -50,6 +50,9 @@ import envelopeFill from "./contactUs/envelopeFill.svg";
 import map from "./contactUs/map.svg";
 import shareFill from "./contactUs/shareFill.svg";
 import telephone from "./contactUs/telephone.svg";
+// import images for Arrow
+import left from "./Arrow/left.svg";
+import right from "./Arrow/right.svg";
 
 // export images for menu
 export const menu1SVG = menu1;
@@ -81,8 +84,9 @@ export const EnvelopeFillSVG = envelopeFill;
 export const MapSVG = map;
 export const ShareFillSVG = shareFill;
 export const TelephoneSVG = telephone;
-
-
+// export images for arrow
+export const LeftSVG = left;
+export const RightSVG = right;
 
 export const ChervonSVG = chervon;
 export const PlayCircleSVG = playCircle;

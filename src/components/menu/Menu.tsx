@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Index from "..";
 import {
   accentColors,
   defaultt,
@@ -213,7 +214,7 @@ const Menu = () => {
             </TabHeader>
           </div>
         </Header>
-        <Row>
+        {/* <Row>
           <MenuItem>
             <a>
               <img src={menu1SVG} alt="" />
@@ -262,8 +263,9 @@ const Menu = () => {
             <h2>Lorem, deren, trataro, filede, nerada</h2>
             <p>$9.95</p>
           </MenuItem>
-        </Row>
+        </Row> */}
       </Container>
+      <Index />
     </section>
   );
 };

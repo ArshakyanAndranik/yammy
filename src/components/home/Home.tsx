@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { accentColors, HeroSvg, PlayCircleSVG, primary } from "../../assets";
-// import AOS from "aos";
+import ModalVideo from "../Modal/view";
+
 
 const Section = styled.section`
   display: flex;
@@ -131,10 +132,11 @@ const Home = () => {
             </Paragraph>
             <Buttons data-aos="fade-up" data-aos-delay="200">
               <Btn1 href="#book-a-table">Book a Table</Btn1>
-              <Btn2 href="https://www.youtube.com/watch?v=LXb3EKWsInQ">
+              {/* <Btn2 href="https://www.youtube.com/watch?v=LXb3EKWsInQ">
                 <ImgSvg style={{ marginBottom: "-10px" }} src={PlayCircleSVG} />
                 <span style={{ marginLeft: "10px" }}>Watch Video</span>
-              </Btn2>
+              </Btn2> */}
+              <ModalVideo/>
             </Buttons>
           </NoName>
           <div>

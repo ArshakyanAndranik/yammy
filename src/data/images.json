@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "text": "Magnam Tiste",
+      "name": "Lorem, deren, trataro",
+      "price": "$5.95",
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-1.png"
+    },
+    {
+      "text": "Aut Luia",
+      "name": "Lorem, deren, trataro",
+      "price": "$14.95",
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-2.png"
+    },
+    {
+      "text": "Est Eligendi",
+      "name": "Lorem, deren, trataro",
+      "price": "$8.95",
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-3.png"
+    },
+    {
+      "text": "Eos Luibusdam",
+      "name": "Lorem, deren, trataro",
+      "price": "$12.95",
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-4.png"
+    },
+    {
+      "text": "Eos Luibusdam",
+      "name": "Lorem, deren, trataro",
+      "price": "$12.95",
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-5.png"
+    },
+    {
+      "text": "Laboriosam",
+      "name": "Lorem, deren, trataro",
+      "price": "$9.95",
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-6.png"
+    }
+  ]
+}

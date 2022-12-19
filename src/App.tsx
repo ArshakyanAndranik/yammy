@@ -16,6 +16,7 @@ import Chefs from "./components/Chefs/Chefs";
 import BookATable from "./components/bookTable/BookATable";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/Contact";
+import Index from "./components";
 
 const App = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const App = () => {
     <>
       <Header />
       <Home />
+      {/* <Index/> */}
       <About />
       <Choose />
       <Clients />
