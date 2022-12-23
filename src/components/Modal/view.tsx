@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import Modal from 'styled-react-modal';
-import FocusLock from 'react-focus-lock';
-import ReactPlayer from 'react-player';
-import { AiOutlinePlayCircle } from 'react-icons/ai';
-import { IoMdClose } from 'react-icons/io';
-import styled from 'styled-components';
-import { accentColors } from '../../assets';
+import React, { useState } from "react";
+import Modal from "styled-react-modal";
+import FocusLock from "react-focus-lock";
+import ReactPlayer from "react-player";
+import { AiOutlinePlayCircle } from "react-icons/ai";
+import { IoMdClose } from "react-icons/io";
+import styled from "styled-components";
 
 const StyledModal = Modal.styled`
   position: relative;
@@ -16,13 +15,13 @@ const StyledModal = Modal.styled`
   transition : all 0.3s ease-in-out;
   `;
 const BtnPlay = styled.a`
-  z-index: 1222;
+  z-index: 1;
   display: flex !important;
   align-items: center;
   font-size: 16px;
   transition: 0.5s;
   margin-left: 25px;
-  color: rgba(255, 255, 255, 0.7); //watch video
+  color: rgba(255, 0, 0, 0.7);
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -35,10 +34,10 @@ const BtnPlay = styled.a`
   }
 `;
 const Play = styled(AiOutlinePlayCircle)`
-  z-index: 13223323233232;
+  z-index: 999991;
   height: 32px;
   width: 32px;
-  color: ${accentColors.primary};
+  color: red;
   margin-right: 5px;
   :hover {
     color: #82cbed;
@@ -57,28 +56,33 @@ const XIcon = styled(IoMdClose)`
 function ModalVideo() {
   const [isOpen, setIsOpen] = useState(false);
 
-  function toggleModal(e: any) {
+  function toggleModal() {
     setIsOpen(!isOpen);
   }
 
   return (
     <>
-      <BtnPlay onClick={toggleModal}>
-        {' '}
-        <Play />
-        <span>Watch Video</span>
+      <BtnPlay onClick={() => toggleModal()}>
+        {" "}
+        {/* <Play /> */}
+        {/* <Btn2 >
+                <ImgSvg style={{ marginBottom: "-10px" }} src={PlayCircleSVG} />
+                <span style={{ marginLeft: "10px" }}>Watch Video</span>
+              </Btn2> */}
+        {/* <span>Watch Video</span> */}
       </BtnPlay>
       <StyledModal
         isOpen={isOpen}
-        onEscapeKeydown={toggleModal}
-        //@ts-ignore
-        role='dialog'
+        onEscapeKeydown={() => toggleModal()}
         aria-modal={true}
-        aria-labelledby='modal-label'
+        aria-labelledby="modal-label"
       >
         <FocusLock>
-          <XIcon onClick={toggleModal} />
-          <ReactPlayer controls={true} url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
+          <XIcon onClick={() => toggleModal()} />
+          <ReactPlayer
+            controls={true}
+            url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+          />
         </FocusLock>
       </StyledModal>
     </>
