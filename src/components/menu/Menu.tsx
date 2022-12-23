@@ -3,12 +3,6 @@ import Index from "..";
 import {
   accentColors,
   defaultt,
-  menu1SVG,
-  menu2SVG,
-  menu3SVG,
-  menu4SVG,
-  menu5SVG,
-  menu6SVG,
   primary,
   secondary,
 } from "../../assets";
@@ -36,14 +30,12 @@ const Container = styled.div`
 `;
 const SectionHeader = styled.div`
   text-align: center;
-  padding-bottom: 30px;
 
   h2 {
     font-size: 13px;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0;
-    padding: 0;
     color: #7f7f90;
     text-transform: uppercase;
     font-family: ${defaultt};
@@ -62,10 +54,9 @@ const Nav = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
+
   list-style: none;
-  border: 0;
+
 
 `;
 const Li = styled.li`
@@ -112,7 +103,6 @@ const Link = styled.a`
 `;
 const Header = styled.div``;
 const TabHeader = styled.div`
-  padding: 30px 0;
   text-align: center;
   
   p {
@@ -214,56 +204,6 @@ const Menu = () => {
             </TabHeader>
           </div>
         </Header>
-        {/* <Row>
-          <MenuItem>
-            <a>
-              <img src={menu1SVG} alt="" />
-            </a>
-            <h4>Magnam Tiste</h4>
-            <h2>Lorem, deren, trataro, filede, nerada</h2>
-            <p>$5.95</p>
-          </MenuItem>
-          <MenuItem>
-            <a href="assets/img/menu/menu-item-1.png">
-              <img src={menu2SVG} alt="" />
-            </a>
-            <h4>Aut Luia</h4>
-            <h2>Lorem, deren, trataro, filede, nerada</h2>
-            <p>$14.95</p>
-          </MenuItem>
-          <MenuItem>
-            <a href="assets/img/menu/menu-item-1.png">
-              <img src={menu3SVG} alt="" />
-            </a>
-            <h4>Est Eligendi</h4>
-            <h2>Lorem, deren, trataro, filede, nerada</h2>
-            <p>$8.95</p>
-          </MenuItem>
-          <MenuItem>
-            <a href="assets/img/menu/menu-item-1.png">
-              <img src={menu4SVG} alt="" />
-            </a>
-            <h4>Eos Luibusdam</h4>
-            <h2>Lorem, deren, trataro, filede, nerada</h2>
-            <p>$12.95</p>
-          </MenuItem>
-          <MenuItem>
-            <a href="assets/img/menu/menu-item-1.png">
-              <img src={menu5SVG} alt="" />
-            </a>
-            <h4>Eos Luibusdam</h4>
-            <h2>Lorem, deren, trataro, filede, nerada</h2>
-            <p>$12.95</p>
-          </MenuItem>
-          <MenuItem>
-            <a href="assets/img/menu/menu-item-1.png">
-              <img src={menu6SVG} alt="" />
-            </a>
-            <h4>Laboriosam Direva</h4>
-            <h2>Lorem, deren, trataro, filede, nerada</h2>
-            <p>$9.95</p>
-          </MenuItem>
-        </Row> */}
       </Container>
       <Index />
     </section>

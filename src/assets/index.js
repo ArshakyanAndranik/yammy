@@ -53,7 +53,7 @@ import telephone from "./contactUs/telephone.svg";
 // import images for Arrow
 import left from "./Arrow/left.svg";
 import right from "./Arrow/right.svg";
-
+import x from "./Arrow/x.svg";
 // export images for menu
 export const menu1SVG = menu1;
 export const menu2SVG = menu2;
@@ -87,6 +87,7 @@ export const TelephoneSVG = telephone;
 // export images for arrow
 export const LeftSVG = left;
 export const RightSVG = right;
+export const XSVG = x;
 
 export const ChervonSVG = chervon;
 export const PlayCircleSVG = playCircle;
