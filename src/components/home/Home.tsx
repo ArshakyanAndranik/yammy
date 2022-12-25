@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { accentColors, HeroSvg, PlayCircleSVG, primary } from "../../assets";
 import ModalVideo from "../Modal/view";
 
-
 const Section = styled.section`
   display: flex;
   align-items: center;
@@ -47,7 +46,7 @@ const NoName = styled.div`
   flex-direction: column;
   justify-content: center;
   @media (max-width: 390px) {
-margin-left: 20px;
+    margin-left: 20px;
   }
 `;
 
@@ -73,8 +72,7 @@ const Paragraph = styled.p`
   margin-bottom: 30px;
   max-width: 400px;
   @media (max-width: 390px) {
-  text-align:center;
-    
+    text-align: center;
   }
 `;
 const Buttons = styled.div`
@@ -114,6 +112,10 @@ const ImgSvg = styled.img`
     margin-left: 20px;
   }
 `;
+const Modalka = styled.div`
+margin-left: 140px;
+margin-top: -50px;
+`
 
 const Home = () => {
   return (
@@ -132,11 +134,9 @@ const Home = () => {
             </Paragraph>
             <Buttons data-aos="fade-up" data-aos-delay="200">
               <Btn1 href="#book-a-table">Book a Table</Btn1>
-              {/* <Btn2 >
-                <ImgSvg style={{ marginBottom: "-10px" }} src={PlayCircleSVG} />
-                <span style={{ marginLeft: "10px" }}>Watch Video</span>
-              </Btn2> */}
-              <ModalVideo/>
+              <Modalka>
+                <ModalVideo />
+              </Modalka>
             </Buttons>
           </NoName>
           <div>

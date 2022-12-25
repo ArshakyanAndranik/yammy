@@ -5,6 +5,7 @@ import ReactPlayer from "react-player";
 import { AiOutlinePlayCircle } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import styled from "styled-components";
+import { accentColors, PlayCircleSVG } from "../../assets";
 
 const StyledModal = Modal.styled`
   position: relative;
@@ -52,7 +53,22 @@ const XIcon = styled(IoMdClose)`
   font-size: 24px;
   cursor: pointer;
 `;
-
+const Btn2 = styled.a`
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  margin-top: 10px;
+  color: ${accentColors.secondary};
+  font-weight: 600;
+`;
+const ImgSvg = styled.img`
+  max-width: 100%;
+  height: auto;
+  @media (max-width: 390px) {
+    max-width: 90%;
+    margin-left: 20px;
+  }
+`;
 function ModalVideo() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,12 +80,10 @@ function ModalVideo() {
     <>
       <BtnPlay onClick={() => toggleModal()}>
         {" "}
-        {/* <Play /> */}
-        {/* <Btn2 >
-                <ImgSvg style={{ marginBottom: "-10px" }} src={PlayCircleSVG} />
-                <span style={{ marginLeft: "10px" }}>Watch Video</span>
-              </Btn2> */}
-        {/* <span>Watch Video</span> */}
+        <Btn2>
+          <ImgSvg style={{ marginBottom: "-10px" }} src={PlayCircleSVG} />
+          <span style={{ marginLeft: "10px" }}>Watch Video</span>
+        </Btn2>
       </BtnPlay>
       <StyledModal
         isOpen={isOpen}
