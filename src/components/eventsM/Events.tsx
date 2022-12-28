@@ -14,8 +14,6 @@ import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/free-mode";
 
-const Section = styled.section``;
-
 
 
 
@@ -132,7 +130,7 @@ const Price = styled.div`
 
 const Events = () => {
   return (
-    <Section id="events">
+    <section id="events">
       <Container data-aos="fade-up">
         <SectionHeader>
           <h2>Events</h2>
@@ -195,7 +193,7 @@ const Events = () => {
           </Swiper>
         </Slides>
       </Container>
-    </Section>
+    </section>
   );
 };
 

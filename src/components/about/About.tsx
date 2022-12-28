@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AboutSvg, AboutSvg2, accentColors, CheckSvg, Container, defaultt, primary } from "../../assets";
+import { AboutSvg, AboutSvg2, accentColors, CheckSvg, Container, defaultt, primary, SectionHeader } from "../../assets";
 
 const Section = styled.section`
   /* @media (max-width: 860px) {
@@ -10,29 +10,7 @@ const Section = styled.section`
   } */
 `;
 
-const SectionHeader = styled.div`
-  text-align: center;
-  padding-bottom: 30px;
-  h2 {
-    font-size: 13px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    color: #7f7f90;
-    text-transform: uppercase;
-    font-family: ${defaultt};
-  }
-  p {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 400;
-    font-family: ${primary};
-    span {
-      color: ${accentColors.primary};
-    }
-  }
-`;
+
 
 const CallUs = styled.div`
   position: absolute;

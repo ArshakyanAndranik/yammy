@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { accentColors, defaultt, primary, QuoteSvg, secondary, StarSvg, testimonials1SVG, testimonials2SVG, testimonials3SVG, testimonials4SVG } from "../../assets";
+import { accentColors, defaultt, primary, QuoteSvg, secondary, SectionHeader, StarSvg, testimonials1SVG, testimonials2SVG, testimonials3SVG, testimonials4SVG } from "../../assets";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
@@ -29,29 +29,7 @@ const Container = styled.div`
     max-width: 1320px;
   }
 `;
-const SectionHeader = styled.div`
-  text-align: center;
-  padding-bottom: 30px;
-  h2 {
-    font-size: 13px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    color: #7f7f90;
-    text-transform: uppercase;
-    font-family: ${defaultt};
-  }
-  p {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 400;
-    font-family: ${primary};
-    span {
-      color: ${accentColors.primary};
-    }
-  }
-`;
+
 const InnerDiv = styled.div`
   border-left: 3px solid ${accentColors.primary};
   padding-left: 30px;

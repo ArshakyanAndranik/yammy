@@ -1,31 +1,7 @@
 import styled from "styled-components";
-import { accentColors, Container, defaultt, primary, ReservationSvg } from "../../assets";
+import { accentColors, Container, ReservationSvg, SectionHeader } from "../../assets";
 
-const Section = styled.section``;
 
-const SectionHeader = styled.div`
-  text-align: center;
-  padding-bottom: 30px;
-  h2 {
-    font-size: 13px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    color: #7f7f90;
-    text-transform: uppercase;
-    font-family: ${defaultt};
-  }
-  p {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 400;
-    font-family: ${primary};
-    span {
-      color: ${accentColors.primary};
-    }
-  }
-`;
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -237,7 +213,7 @@ const TextCenter = styled.div`
 
 const BookATable = () => {
   return (
-    <Section id="book-a-table">
+    <section id="book-a-table">
       <Container data-aos="fade-up">
         <SectionHeader>
           <h2>Book A Table</h2>
@@ -326,7 +302,7 @@ const BookATable = () => {
           </Collg8>
         </Row>
       </Container>
-    </Section>
+    </section>
   );
 };
 
