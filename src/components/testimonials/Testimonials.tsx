@@ -1,5 +1,17 @@
 import styled from "styled-components";
-import { accentColors, defaultt, primary, QuoteSvg, secondary, SectionHeader, StarSvg, testimonials1SVG, testimonials2SVG, testimonials3SVG, testimonials4SVG } from "../../assets";
+import {
+  accentColors,
+  defaultt,
+  primary,
+  QuoteSvg,
+  secondary,
+  SectionHeader,
+  StarSvg,
+  testimonials1SVG,
+  testimonials2SVG,
+  testimonials3SVG,
+  testimonials4SVG,
+} from "../../assets";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
@@ -74,6 +86,8 @@ const ImageDiv = styled.div`
 `;
 
 const Testimonials = () => {
+  let Star = <img src={StarSvg}/>;
+  const Stars = new Array(5).fill(Star);
   return (
     <Section>
       <Container data-aos="fade-up">
@@ -113,13 +127,7 @@ const Testimonials = () => {
                       </p>
                       <h3>Saul Goodman</h3>
                       <h4>Ceo &amp; Founder</h4>
-                      <div>
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                      </div>
+                      <div>{Stars}</div>
                     </InnerDiv>
                   </FlexDiv>
                   <ImageDiv>
@@ -140,13 +148,7 @@ const Testimonials = () => {
                       </p>
                       <h3>Sara Wilsson</h3>
                       <h4>Designer</h4>
-                      <div>
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                      </div>
+                      <div>{Stars}</div>
                     </InnerDiv>
                   </FlexDiv>
                   <ImageDiv>
@@ -154,7 +156,6 @@ const Testimonials = () => {
                   </ImageDiv>
                 </JustifyDiv>
               </SwiperSlide>
-
 
               <SwiperSlide>
                 <JustifyDiv>
@@ -168,13 +169,7 @@ const Testimonials = () => {
                       </p>
                       <h3>Jena Karlis</h3>
                       <h4>Store Owner</h4>
-                      <div>
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                      </div>
+                      <div>{Stars}</div>
                     </InnerDiv>
                   </FlexDiv>
                   <ImageDiv>
@@ -183,7 +178,6 @@ const Testimonials = () => {
                 </JustifyDiv>
               </SwiperSlide>
 
-              
               <SwiperSlide>
                 <JustifyDiv>
                   <FlexDiv>
@@ -196,13 +190,7 @@ const Testimonials = () => {
                       </p>
                       <h3>John Larson</h3>
                       <h4>Entrepreneur</h4>
-                      <div>
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                        <img src={StarSvg} />
-                      </div>
+                      <div>{Stars}</div>
                     </InnerDiv>
                   </FlexDiv>
                   <ImageDiv>
