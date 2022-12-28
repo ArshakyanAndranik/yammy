@@ -1,4 +1,4 @@
-// import styled from "styled-components";
+import styled from "styled-components";
 import chervon from "./chevron-down.svg";
 import playCircle from "./play-circle.svg";
 import hero from "./hero-img.png";
@@ -123,4 +123,31 @@ export const accentColors = {
   primary: "#ce1212",
   secondary: "#37373f",
 };
-
+// Sizes
+export const size = {
+  S: "@media (min-width: 576px)",
+  M: " @media (min-width: 768px)",
+  L: "@media (min-width: 992px)",
+  XL: "@media (min-width: 1200px)",
+  XXL: "@media (min-width: 1400px)",
+};
+export const Container = styled.div`
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  ${size.S} {
+    max-width: 540px;
+  }
+  ${size.M} {
+    max-width: 720px;
+  }
+  ${size.L} {
+    max-width: 960px;
+  }
+  ${size.XL} {
+    max-width: 1140px;
+  }
+  ${size.XXL} {
+    max-width: 1320px;
+  }
+`;

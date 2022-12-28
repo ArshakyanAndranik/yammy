@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { accentColors, HeroSvg, PlayCircleSVG, primary } from "../../assets";
+import { accentColors, Container, HeroSvg } from "../../assets";
 import ModalVideo from "../Modal/view";
 
 const Section = styled.section`
@@ -12,26 +12,7 @@ const Section = styled.section`
   min-height: 60vh;
   padding: 160px 0 60px 0;
 `;
-const Container = styled.div`
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  @media (min-width: 576px) {
-    max-width: 540px;
-  }
-  @media (min-width: 768px) {
-    max-width: 720px;
-  }
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 1400px) {
-    max-width: 1320px;
-  }
-`;
+
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -68,7 +49,6 @@ const Info = styled.h2`
 const Paragraph = styled.p`
   color: #4f4f5a;
   font-weight: 400;
-  /* margin-left: 70px; */
   margin-bottom: 30px;
   max-width: 400px;
   @media (max-width: 390px) {

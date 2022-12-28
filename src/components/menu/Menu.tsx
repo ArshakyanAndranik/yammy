@@ -1,11 +1,7 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import Index from "..";
-import {
-  accentColors,
-  defaultt,
-  primary,
-  secondary,
-} from "../../assets";
+import { accentColors, defaultt, primary, secondary } from "../../assets";
 
 const Section = styled.section``;
 const Container = styled.div`
@@ -56,8 +52,6 @@ const Nav = styled.ul`
   flex-wrap: wrap;
 
   list-style: none;
-
-
 `;
 const Li = styled.li`
   color: ${accentColors.grey};
@@ -104,7 +98,7 @@ const Link = styled.a`
 const Header = styled.div``;
 const TabHeader = styled.div`
   text-align: center;
-  
+
   p {
     font-size: 14px;
     text-transform: uppercase;
@@ -121,7 +115,6 @@ const TabHeader = styled.div`
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-
 `;
 const MenuItem = styled.div`
   -moz-text-align-last: center;
@@ -171,8 +164,13 @@ const MenuItem = styled.div`
   }
 `;
 
-
 const Menu = () => {
+  let str = ''
+   const [state, setState] = useState("Starters");
+
+  function changeName(value:string) {
+    setState(value);
+  }
   return (
     <section id="menu" className="menu">
       <Container data-aos="fade-up">
@@ -184,23 +182,47 @@ const Menu = () => {
         </SectionHeader>
         <Nav data-aos="fade-up" data-aos-delay="200">
           <Link className="active show">
-            <h4>Starters</h4>
+            <h4
+              onClick={() => {
+                changeName("Starters");
+              }}
+            >
+              Starters
+            </h4>
           </Link>
           <Link>
-            <h4>Breakfast</h4>
+            <h4
+              onClick={() => {
+                changeName("Breakfast");
+              }}
+            >
+              Breakfast
+            </h4>
           </Link>
           <Link>
-            <h4>Lunch</h4>
+            <h4
+              onClick={() => {
+                changeName("Lunch");
+              }}
+            >
+              Lunch
+            </h4>
           </Link>
           <Link>
-            <h4>Dinner</h4>
+            <h4
+              onClick={() => {
+                changeName("Dinner");
+              }}
+            >
+              Dinner
+            </h4>
           </Link>
         </Nav>
         <Header data-aos="fade-up" data-aos-delay="300">
           <div>
             <TabHeader>
               <p>Menu</p>
-              <h3>Starters</h3>
+              <h3>{state}</h3>
             </TabHeader>
           </div>
         </Header>

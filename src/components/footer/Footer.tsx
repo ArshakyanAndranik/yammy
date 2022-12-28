@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import {СlockSvg, FCSVG, GeoAltSvg, INSVG, LNSVG, TelephoneSVG, TWSVG } from "../../assets";
+import {СlockSvg, FCSVG, GeoAltSvg, INSVG, LNSVG, TelephoneSVG, TWSVG, Container } from "../../assets";
 
 const Footers = styled.footer`
   font-size: 14px;
   background-color: #1f1f24;
   padding: 50px 0;
   color: rgba(255, 255, 255, 0.7);
-  /* @media (max-width: 992px) {
-    max-width: 960px;
-  } */
+
   h4 {
     font-size: 16px;
     font-weight: bold;
@@ -16,26 +14,7 @@ const Footers = styled.footer`
     color: #fff;
   }
 `;
-const Container = styled.div`
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  @media (min-width: 576px) {
-    max-width: 540px;
-  }
-  @media (min-width: 768px) {
-    max-width: 720px;
-  }
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 1400px) {
-    max-width: 1320px;
-  }
-`;
+
 const Rowgy3 = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -47,11 +26,6 @@ const Collz3colmd6 = styled.div`
   flex: 0 0 auto;
   margin-bottom: 30px;
   width: 23%;
-  /* width: 25%; */
-  /* @media (min-width: 992px) {
-    flex: 0 0 auto;
-    width: 23%;
-  } */
   img {
     margin-left: 55px;
     margin-top: -50px;
@@ -81,7 +55,6 @@ const Collz3colmd7 = styled.div`
   justify-content: space-between;
   flex: 0 0 auto;
   margin-bottom: 30px;
-  /* width: 25%; */
   @media (min-width: 992px) {
     flex: 0 0 auto;
     width: 23%;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AboutSvg, AboutSvg2, accentColors, CheckSvg, defaultt, primary } from "../../assets";
+import { AboutSvg, AboutSvg2, accentColors, CheckSvg, Container, defaultt, primary } from "../../assets";
 
 const Section = styled.section`
   /* @media (max-width: 860px) {
@@ -9,26 +9,7 @@ const Section = styled.section`
     margin-left: -180px;
   } */
 `;
-const Container = styled.div`
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  @media (min-width: 576px) {
-    max-width: 540px; 
-  }
-  @media (min-width: 768px) {
-    max-width: 720px;
-  }
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 1400px) {
-    max-width: 1320px;
-  }
-`;
+
 const SectionHeader = styled.div`
   text-align: center;
   padding-bottom: 30px;

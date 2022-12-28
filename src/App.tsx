@@ -11,12 +11,10 @@ import AOS from "aos";
 import ScrollToTop from "react-scroll-to-top";
 import Testimonials from "./components/testimonials/Testimonials";
 import Events from "./components/eventsM/Events";
-import Contacts from "./components/contact/Contact";
 import Chefs from "./components/Chefs/Chefs";
 import BookATable from "./components/bookTable/BookATable";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/Contact";
-import Index from "./components";
 import { BaseModalBackground, ModalProvider } from "styled-react-modal";
 import styled from "styled-components";
 

@@ -2,6 +2,7 @@ import Iframe from "react-iframe";
 import styled from "styled-components";
 import {
   accentColors,
+  Container,
   defaultt,
   EnvelopeFillSVG,
   GeoAltSvg,
@@ -12,27 +13,7 @@ import {
 } from "../../assets";
 
 const Section = styled.section``;
-const Container = styled.div`
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0;
-  @media (min-width: 576px) {
-    max-width: 540px;
-  }
-  @media (min-width: 768px) {
-    max-width: 720px;
-  }
-  @media (min-width: 992px) {
-    max-width: 960px;
-  }
-  @media (min-width: 1200px) {
-    max-width: 1140px;
-  }
-  @media (min-width: 1400px) {
-    max-width: 1320px;
-  }
-`;
+
 const SectionHeader = styled.div`
   text-align: center;
   padding-bottom: 30px;
@@ -64,9 +45,7 @@ const Mb3 = styled.div`
 const Rowgy4 = styled.div`
   display: flex;
   flex-wrap: wrap;
-  /* @media (max-width: 768px) {
-    width: 96%;
-  } */
+
 `;
 const Colmd6 = styled.div`
   flex: 0 0 auto;
@@ -137,7 +116,6 @@ const Form = styled.form`
   margin-top: 30px;
   background: #fff;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
-  /* padding: 20px; */
 `;
 
 const Row = styled.div`
@@ -167,7 +145,6 @@ const Colxl6 = styled.div`
 `;
 
 const Input = styled.input`
-  /* margin-left: 15px; */
   display: block;
   width: 95%;
   margin-top: 10px;
@@ -183,10 +160,6 @@ const Input = styled.input`
   appearance: none;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   padding: 12px 15px;
-  /* 
-     @media (max-width: 992px) {
-      width: 83%;
-    } */
   @media (max-width: 768px) {
     margin-left: -10px;
     width: 95%;
