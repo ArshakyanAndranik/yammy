@@ -18,6 +18,19 @@ import "swiper/css/free-mode";
 
 const Section = styled.section`
   background-color: #eee;
+  .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #d1d1d7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: ${accentColors.primary};
+  }
 `;
 
 const InnerDiv = styled.div`
