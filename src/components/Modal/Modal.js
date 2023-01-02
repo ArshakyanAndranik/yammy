@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { LeftSVG, RightSVG, XSVG } from "../../assets";
+import { LeftSVG, RightSVG } from "../../assets";
 
 
 const Image = styled.img`
   display: block;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 95%;
   margin: 0px auto;
   @media (max-width: 768px) {
     max-width: 80%;
@@ -60,7 +60,7 @@ const Overlay = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(27, 27, 27, 0.541);
+  background: rgba(20, 20, 20, 0.950);
   display: flex;
   align-items: center;
   > span {

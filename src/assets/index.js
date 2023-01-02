@@ -15,7 +15,6 @@ import reservation from "./reservation.jpg";
 import teamShape from "./teamShape.svg";
 import geoAlt from "./geoAlt.svg";
 import clock from "./clock.svg";
-
 // import images for menu
 import menu1 from "./menu/menu-item-1.png";
 import menu2 from "./menu/menu-item-2.png";
@@ -23,23 +22,19 @@ import menu3 from "./menu/menu-item-3.png";
 import menu4 from "./menu/menu-item-4.png";
 import menu5 from "./menu/menu-item-5.png";
 import menu6 from "./menu/menu-item-6.png";
-
 // import images for testimonials
 import testimonials1 from "./testimonials/testimonials1.jpg";
 import testimonials2 from "./testimonials/testimonials2.jpg";
 import testimonials3 from "./testimonials/testimonials3.jpg";
 import testimonials4 from "./testimonials/testimonials4.jpg";
-
 // import images for event
 import events1 from "./event/events1.jpg";
 import events2 from "./event/events2.jpg";
 import events3 from "./event/events3.jpg";
-
 // import images for chefs
 import chefs1 from "./chefs/chefs1.jpg";
 import chefs2 from "./chefs/chefs2.jpg";
 import chefs3 from "./chefs/chefs3.jpg";
-
 // import images for social network
 import facebook from "./socialNetwork/facebook.svg";
 import instagram from "./socialNetwork/instagram.svg";
@@ -54,6 +49,19 @@ import telephone from "./contactUs/telephone.svg";
 import left from "./Arrow/left.svg";
 import right from "./Arrow/right.svg";
 import x from "./Arrow/x.svg";
+// import images for Gallery
+import gallery1 from "./gallery/gallery1.jpg";
+import gallery2 from "./gallery/gallery2.jpg";
+import gallery3 from "./gallery/gallery3.jpg";
+import gallery4 from "./gallery/gallery4.jpg";
+import gallery5 from "./gallery/gallery5.jpg";
+import gallery6 from "./gallery/gallery6.jpg";
+import gallery7 from "./gallery/gallery7.jpg";
+import gallery8 from "./gallery/gallery8.jpg";
+
+
+
+
 // export images for menu
 export const menu1SVG = menu1;
 export const menu2SVG = menu2;
@@ -88,6 +96,18 @@ export const TelephoneSVG = telephone;
 export const LeftSVG = left;
 export const RightSVG = right;
 export const XSVG = x;
+// export images for gallery
+export const Gallery1SVG = gallery1;
+export const Gallery2SVG = gallery2;
+export const Gallery3SVG = gallery3;
+export const Gallery4SVG = gallery4;
+export const Gallery5SVG = gallery5;
+export const Gallery6SVG = gallery6;
+export const Gallery7SVG = gallery7;
+export const Gallery8SVG = gallery8;
+
+
+
 
 export const ChervonSVG = chervon;
 export const PlayCircleSVG = playCircle;

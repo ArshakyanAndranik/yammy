@@ -1,12 +1,10 @@
 import styled from "styled-components";
 import {
   accentColors,
-  Container,
-  defaultt,
   events1SVG,
   events2SVG,
   events3SVG,
-  primary,
+  SectionHeader,
 } from "../../assets";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
@@ -14,38 +12,40 @@ import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/free-mode";
 
-
-
-
-const SectionHeader = styled.div`
-  text-align: center;
-  padding-bottom: 30px;
-  h2 {
-    font-size: 13px;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    color: #7f7f90;
-    text-transform: uppercase;
-    font-family: ${defaultt};
+const Container = styled.div`
+  padding: 0;
+  .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
   }
-  p {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 400;
-    font-family: ${primary};
-    span {
-      color: ${accentColors.primary};
-    }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #d1d1d7;
+    opacity: 1;
   }
+  .swiper-pagination-bullet-active {
+    background-color: ${accentColors.primary};
+  }
+
+    /* .swiper-slide-active + .swiper-slide {
+        @media (min-width: 1200px) {
+      border-left: 1px solid rgba(232, 18, 18, 0.5);
+      border-right: 1px solid rgba(255, 255, 255, 0.5);
+      z-index: 1;
+        }
+    } */
+  
 `;
+
+
+
 const Description = styled.p`
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.9);
   position: relative;
 `;
-const Slides = styled.div``;
+
 const SwiperR = styled.div`
   display: flex;
 `;
@@ -71,6 +71,12 @@ const SwiperSlide1 = styled.div`
   @media (max-width: 575px) {
     min-height: 500px;
   }
+  :before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
+  }
 `;
 const SwiperSlid2 = styled.div`
   display: flex;
@@ -93,6 +99,12 @@ const SwiperSlid2 = styled.div`
   }
   @media (max-width: 575px) {
     min-height: 500px;
+  }
+  :before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
   }
 `;
 const SwiperSlide3 = styled.div`
@@ -117,6 +129,12 @@ const SwiperSlide3 = styled.div`
   @media (max-width: 575px) {
     min-height: 500px;
   }
+  :before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    inset: 0;
+  }
 `;
 const Price = styled.div`
   color: #fff;
@@ -138,21 +156,28 @@ const Events = () => {
             Share <span>Your Moments</span> In Our Restaurant
           </p>
         </SectionHeader>
-        <Slides data-aos="fade-up" data-aos-delay="100">
+        <div data-aos="fade-up" data-aos-delay="100">
           <Swiper
-            spaceBetween={30}
+            spaceBetween={1}
+            slidesPerView={1}
             centeredSlides={true}
             loop={true}
             autoplay={{
               delay: 4000,
               disableOnInteraction: false,
             }}
-            pagination={{
-              clickable: true,
-            }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
+            pagination={{
+              clickable: true,
+            }}
+            breakpoints={{
+
+              1200: {
+                slidesPerView: 3,
+              },
+            }}
           >
             <SwiperR>
               <SwiperSlide>
@@ -191,7 +216,7 @@ const Events = () => {
               </SwiperSlide>
             </SwiperR>
           </Swiper>
-        </Slides>
+        </div>
       </Container>
     </section>
   );

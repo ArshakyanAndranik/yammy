@@ -1,5 +1,5 @@
 {
-  "data": [
+  "menu": [
     {
       "text": "Magnam Tiste",
       "name": "Lorem, deren, trataro",
@@ -35,6 +35,32 @@
       "name": "Lorem, deren, trataro",
       "price": "$9.95",
       "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/menu/menu-item-6.png"
+    }
+  ],
+  "gallery": [
+    {
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-1.jpg"
+    },
+    {
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-2.jpg"
+    },
+    {
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-3.jpg"
+    },
+    {
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-4.jpg"
+    },
+    {
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-5.jpg"
+    },
+    {
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-6.jpg"
+    },
+    {
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-7.jpg"
+    },
+    {
+      "link": "https://bootstrapmade.com/demo/templates/Yummy/assets/img/gallery/gallery-8.jpg"
     }
   ]
 }

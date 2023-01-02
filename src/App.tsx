@@ -17,6 +17,8 @@ import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/Contact";
 import { BaseModalBackground, ModalProvider } from "styled-react-modal";
 import styled from "styled-components";
+import Gallery from "./components/Gallery/Gallery";
+
 
 const SpecialModalBackground = styled(BaseModalBackground)`
   background-color: #0c0b0bc6;
@@ -32,7 +34,6 @@ const App = () => {
       <ModalProvider backgroundComponent={SpecialModalBackground}>
         <Header />
         <Home />
-        {/* <Index/> */}
         <About />
         <Choose />
         <Clients />
@@ -41,6 +42,7 @@ const App = () => {
         <Events />
         <Chefs />
         <BookATable />
+        <Gallery/>
         <Contact />
         <Footer />
         <ScrollToTop smooth className="scroll-to-top" color="white" />
