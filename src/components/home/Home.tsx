@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { accentColors, Container, HeroSvg } from "../../assets";
-import ModalVideo from "../Modal/view";
+import ModalVideo from "../modal/view";
 
 const Section = styled.section`
   display: flex;
@@ -93,9 +93,9 @@ const ImgSvg = styled.img`
   }
 `;
 const Modalka = styled.div`
-margin-left: 140px;
-margin-top: -50px;
-`
+  margin-left: 140px;
+  margin-top: -50px;
+`;
 
 const Home = () => {
   return (

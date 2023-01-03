@@ -1,8 +1,8 @@
 import React from "react";
 import { useEffect } from "react";
 import About from "./components/about/About";
-import Choose from "./components/Choose/Choose";
-import Clients from "./components/Clients/Clients";
+import Choose from "./components/choose/Choose";
+import Clients from "./components/clients/Clients";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Menu from "./components/menu/Menu";
@@ -11,13 +11,13 @@ import AOS from "aos";
 import ScrollToTop from "react-scroll-to-top";
 import Testimonials from "./components/testimonials/Testimonials";
 import Events from "./components/eventsM/Events";
-import Chefs from "./components/Chefs/Chefs";
+import Chefs from "./components/chefs/Chefs";
 import BookATable from "./components/bookTable/BookATable";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/Contact";
 import { BaseModalBackground, ModalProvider } from "styled-react-modal";
 import styled from "styled-components";
-import Gallery from "./components/Gallery/Gallery";
+import Gallery from "./components/gallery/Gallery";
 
 
 const SpecialModalBackground = styled(BaseModalBackground)`

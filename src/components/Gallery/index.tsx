@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { accentColors, secondary } from "../../assets";
 
-
 import gallery from "../../data/images.json";
-import Modal from "../Modal/Modal";
+import Modal from "../modal/Modal";
 
 const Wrapper = styled.div`
   /* max-width: 1350px;
@@ -42,8 +41,6 @@ function IndexGallery() {
     setClickedImg(item.link);
   };
 
-
-
   const handelRotationRight = () => {
     const totalLength = gallery.gallery.length;
     //@ts-ignore
@@ -60,7 +57,6 @@ function IndexGallery() {
     const newUrl = gallery.gallery.filter((item) => {
       return gallery.gallery.indexOf(item) === newIndex;
     });
-
 
     const newItem = newUrl[0].link;
     //@ts-ignore
@@ -90,19 +86,12 @@ function IndexGallery() {
     setCurrentIndex(newIndex);
   };
 
-
-
   return (
     <Wrapper>
       {gallery.gallery.map((item, index) => (
         <div key={index} className="wrapper-images">
           <MenuItem>
-            <img
-            
-              src={item.link}
-              onClick={() => handleClick(item, index)}
-            />
-
+            <img src={item.link} onClick={() => handleClick(item, index)} />
           </MenuItem>
         </div>
       ))}

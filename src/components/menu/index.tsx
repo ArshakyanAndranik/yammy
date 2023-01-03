@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { accentColors, secondary } from "../../assets";
 
 import menu from "../../data/images.json";
-import Modal from "../Modal/Modal";
-
+import Modal from "../modal/Modal";
 
 const Wrapper = styled.div`
   max-width: 1350px;
@@ -14,15 +13,10 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   gap: 2em;
 
-
-
   @media (max-width: 390px) {
     padding: 0px 0px;
   }
 
-
-
-  
   img {
     cursor: pointer;
   }
@@ -60,14 +54,10 @@ const MenuItem = styled.div`
   }
 `;
 
-
-
-
-
 function Index() {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
-//@ts-ignore
+  //@ts-ignore
   const handleClick = (item, index) => {
     setCurrentIndex(index);
     setClickedImg(item.link);
@@ -90,14 +80,11 @@ function Index() {
       return menu.menu.indexOf(item) === newIndex;
     });
 
-
     const newItem = newUrl[0].link;
     //@ts-ignore
     setClickedImg(newItem);
     setCurrentIndex(newIndex);
   };
-
-
 
   const handelRotationLeft = () => {
     const totalLength = menu.menu.length;
@@ -121,13 +108,6 @@ function Index() {
     setCurrentIndex(newIndex);
   };
 
-
-
-
-
-
-
-  
   return (
     <Wrapper>
       {menu.menu.map((item, index) => (
