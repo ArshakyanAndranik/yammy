@@ -46,22 +46,9 @@ import map from "./contactUs/map.svg";
 import shareFill from "./contactUs/shareFill.svg";
 import telephone from "./contactUs/telephone.svg";
 // import images for Arrow
-import left from "./Arrow/left.svg";
-import right from "./Arrow/right.svg";
-import x from "./Arrow/x.svg";
-// import images for Gallery
-import gallery1 from "./gallery/gallery1.jpg";
-import gallery2 from "./gallery/gallery2.jpg";
-import gallery3 from "./gallery/gallery3.jpg";
-import gallery4 from "./gallery/gallery4.jpg";
-import gallery5 from "./gallery/gallery5.jpg";
-import gallery6 from "./gallery/gallery6.jpg";
-import gallery7 from "./gallery/gallery7.jpg";
-import gallery8 from "./gallery/gallery8.jpg";
-
-
-
-
+import left from "./arrow/left.svg";
+import right from "./arrow/right.svg";
+import x from "./arrow/x.svg";
 // export images for menu
 export const menu1SVG = menu1;
 export const menu2SVG = menu2;
@@ -96,15 +83,7 @@ export const TelephoneSVG = telephone;
 export const LeftSVG = left;
 export const RightSVG = right;
 export const XSVG = x;
-// export images for gallery
-export const Gallery1SVG = gallery1;
-export const Gallery2SVG = gallery2;
-export const Gallery3SVG = gallery3;
-export const Gallery4SVG = gallery4;
-export const Gallery5SVG = gallery5;
-export const Gallery6SVG = gallery6;
-export const Gallery7SVG = gallery7;
-export const Gallery8SVG = gallery8;
+
 
 
 

@@ -4,8 +4,6 @@ import { accentColors } from ".";
 export const GlobalStyle = createGlobalStyle`
 .scroll-to-top {
     position: fixed;
-    /* visibility: hidden;
-    opacity: 0; */
     right: 15px;
     bottom: 15px;
     z-index: 99999;

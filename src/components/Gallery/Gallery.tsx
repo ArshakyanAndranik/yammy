@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import IndexGallery from ".";
-import { Container, Gallery1SVG, Gallery2SVG, Gallery3SVG, Gallery4SVG, Gallery5SVG, Gallery6SVG, Gallery7SVG, Gallery8SVG, SectionHeader, size } from "../../assets";
+import { Container, SectionHeader, size } from "../../assets";
 
 const GallerySection = styled.section`
   overflow: hidden;
