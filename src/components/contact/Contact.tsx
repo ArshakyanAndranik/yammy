@@ -100,11 +100,12 @@ const Row = styled.div`
 
 const Colxl6 = styled.div`
   flex: 0 0 auto;
-  width: 46%;
+  width: 46.2%;
   padding-bottom: 20px;
-  /* padding-top: 20px; */
-  /* width: 520px; */
   margin-left: 33px;
+  @media (max-width: 1400px) {
+    width: 45.7%;
+  }
   @media (max-width: 1200px) {
     width: 94.5%;
   }
