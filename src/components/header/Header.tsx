@@ -158,15 +158,20 @@ const StyledBurger = styled.div`
     }
   }
 `;
+
+
+
+
+
+
+
+
+
+
+
 const Navbar = styled.nav`
   padding: 0;
-  .active {
-    color: #000;
-    :before {
-      visibility: visible;
-      width: 100%;
-    }
-  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -176,13 +181,6 @@ const Navbar = styled.nav`
   }
   li {
     position: relative;
-    :hover > a {
-      color: #000;
-      :before {
-        visibility: visible;
-        width: 100%;
-      }
-    }
   }
   > ul > li {
     white-space: nowrap;
@@ -193,21 +191,28 @@ const Navbar = styled.nav`
     align-items: center;
     justify-content: space-between;
     padding: 0 3px;
+    font-family: ${secondary};
     font-size: 16px;
     font-weight: 600;
     color: ${accentColors.grey};
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
-    :hover {
-      color: #000;
-      :before {
-        visibility: visible;
-        width: 100%;
-      }
+    :focus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 3px;
+      font-family: ${secondary};
+      font-size: 16px;
+      font-weight: 600;
+      color: ${accentColors.grey};
+      white-space: nowrap;
+      transition: 0.3s;
+      position: relative;
     }
   }
-  > ul > li > a:before {
+  >ul>li>a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -219,10 +224,38 @@ const Navbar = styled.nav`
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
   }
-  li:hover > a:before {
+a:hover:before{
+      visibility: visible;
+    width: 100%;
+}
+
+li:hover>a:before{
+   visibility: visible;
+    width: 100%;
+}
+.active:before {
     visibility: visible;
     width: 100%;
   }
+a:hover{
+   color: #000;
+}
+.active{
+  color: #000;
+}
+.active:focus{
+  color: #000;
+}
+li:hover>a {
+    color: #000;
+  }
+
+
+
+
+
+
+
   .dropdown {
     ul {
       display: block;
@@ -246,11 +279,7 @@ const Navbar = styled.nav`
         font-size: 15px;
         text-transform: none;
         font-weight: 600;
-        i {
-          font-size: 12px;
-        }
       }
-      .dropdown {
         ul {
           a:hover {
             color: ${accentColors.primary};
@@ -263,12 +292,12 @@ const Navbar = styled.nav`
         }
 
         ul {
-          li:hover > a {
+          li:hover>a {
             color: ${accentColors.primary};
           }
         }
-      }
-      .dropdown:hover > ul {
+      
+      .dropdown:hover>ul {
         opacity: 1;
         top: 100%;
         visibility: visible;
@@ -507,7 +536,7 @@ const Header = () => {
           {/* @ts-ignore */}
           <ul>
             <li>
-              <a href="#hero">Home</a>
+              <a href="#hero" className="active">Home</a>
             </li>
             <li>
               <a href="#about">About</a>
