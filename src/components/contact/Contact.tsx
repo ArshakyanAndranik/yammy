@@ -10,17 +10,12 @@ import {
   TelephoneSVG,
 } from "../../assets";
 
-
-
-
 const Mb3 = styled.div`
-  margin-bottom: 1rem !important;
+  margin-bottom: 20px !important;
 `;
-
 const Rowgy4 = styled.div`
   display: flex;
   flex-wrap: wrap;
-
 `;
 const Colmd6 = styled.div`
   flex: 0 0 auto;
@@ -51,14 +46,12 @@ const Colmd7 = styled.div`
     width: 100%;
   }
 `;
-
 const InfoItem = styled.div`
   display: flex;
   align-items: center;
   background: #f4f4f4;
   padding: 30px;
   height: 100%;
-
   .icon {
     display: flex;
     align-items: center;
@@ -85,19 +78,16 @@ const InfoItem = styled.div`
     font-size: 14px;
   }
 `;
-
 const Form = styled.form`
   width: 100%;
   margin-top: 30px;
   background: #fff;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
 `;
-
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
-
 const Colxl6 = styled.div`
   flex: 0 0 auto;
   width: 46.2%;
@@ -119,12 +109,11 @@ const Colxl6 = styled.div`
     width: 87%;
   }
 `;
-
 const Input = styled.input`
   display: block;
   width: 95%;
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -161,63 +150,6 @@ const Input = styled.input`
     border-color: red;
     outline: 0;
   }
-  ::-webkit-date-and-time-value {
-    height: 1.5em;
-  }
-  ::-moz-placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-  ::placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-  :disabled {
-    background-color: #e9ecef;
-    opacity: 1;
-  }
-  ::-webkit-file-upload-button {
-    padding: 0.375rem 0.75rem;
-    margin: -0.375rem -0.75rem;
-    -webkit-margin-end: 0.75rem;
-    margin-inline-end: 0.75rem;
-    color: #212529;
-    background-color: #e9ecef;
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: 1px;
-    border-radius: 0;
-    -webkit-transition: color 0.15s ease-in-out,
-      background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-      box-shadow 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    @media (prefers-reduced-motion: reduce) {
-      -webkit-transition: none;
-      transition: none;
-    }
-  }
-  ::file-selector-button {
-    padding: 0.375rem 0.75rem;
-    margin: -0.375rem -0.75rem;
-    -webkit-margin-end: 0.75rem;
-    margin-inline-end: 0.75rem;
-    color: #212529;
-    background-color: #e9ecef;
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: 1px;
-    border-radius: 0;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
-  }
 `;
 
 const FormGroup = styled.div`
@@ -236,8 +168,8 @@ const Textarea = styled.textarea`
   display: block;
   width: 95%;
   margin-top: 20px;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  padding: 6px 15px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -279,63 +211,6 @@ const Textarea = styled.textarea`
     border-color: red;
     outline: 0;
   }
-  ::-webkit-date-and-time-value {
-    height: 1.5em;
-  }
-  ::-moz-placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-  ::placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-  :disabled {
-    background-color: #e9ecef;
-    opacity: 1;
-  }
-  ::-webkit-file-upload-button {
-    padding: 0.375rem 0.75rem;
-    margin: -0.375rem -0.75rem;
-    -webkit-margin-end: 0.75rem;
-    margin-inline-end: 0.75rem;
-    color: #212529;
-    background-color: #e9ecef;
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: 1px;
-    border-radius: 0;
-    -webkit-transition: color 0.15s ease-in-out,
-      background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-      box-shadow 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    @media (prefers-reduced-motion: reduce) {
-      -webkit-transition: none;
-      transition: none;
-    }
-  }
-  ::file-selector-button {
-    padding: 0.375rem 0.75rem;
-    margin: -0.375rem -0.75rem;
-    -webkit-margin-end: 0.75rem;
-    margin-inline-end: 0.75rem;
-    color: #212529;
-    background-color: #e9ecef;
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: 1px;
-    border-radius: 0;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
-  }
 `;
 const TextCenter = styled.div`
   text-align: center !important;
@@ -343,7 +218,7 @@ const TextCenter = styled.div`
     background: ${accentColors.primary};
     border: 0;
     padding: 12px 40px;
-    color: #fff;
+    color: ${accentColors.white};
     transition: 0.4s;
     border-radius: 50px;
     margin-bottom: 20px;
@@ -393,7 +268,6 @@ const Contact = () => {
                 <div className="icon">
                   <img src={EnvelopeFillSVG} />
                 </div>
-
                 <div>
                   <h3>Email Us</h3>
                   <p>contact@example.com</p>
@@ -405,7 +279,6 @@ const Contact = () => {
                 <div className="icon">
                   <img src={TelephoneSVG} />
                 </div>
-
                 <div>
                   <h3>Call Us</h3>
                   <p>+1 5589 55488 55</p>
@@ -417,7 +290,6 @@ const Contact = () => {
                 <div className="icon">
                   <img src={ShareFillSVG} />
                 </div>
-
                 <div>
                   <h3>Opening Hours</h3>
                   <div>
