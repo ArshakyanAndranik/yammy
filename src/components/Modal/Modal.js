@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { LeftSVG, RightSVG } from "../../assets";
 
-
 const Image = styled.img`
   display: block;
   max-width: 100%;
@@ -32,12 +31,11 @@ const OverlayLeft = styled.div`
   svg {
     width: 50px;
     height: 50px;
-
   }
 `;
 const OverlayRight = styled.div`
   display: flex;
-  background-color: #6d6d6d;
+  background-color: rgba(0, 0, 0, 0.32);
   justify-content: space-between;
   position: absolute;
   right: 0;
@@ -60,7 +58,7 @@ const Overlay = styled.div`
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(20, 20, 20, 0.950);
+  background: rgba(20, 20, 20, 0.95);
   display: flex;
   align-items: center;
   > span {

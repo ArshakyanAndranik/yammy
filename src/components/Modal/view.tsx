@@ -28,7 +28,7 @@ const BtnPlay = styled.a`
   cursor: pointer;
 
   :hover {
-    color: #fff;
+    color: ${accentColors.white};
   }
   @media (max-width: 640px) {
     font-size: 13px;
