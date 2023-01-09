@@ -1,19 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
+import { accentColors } from "../assets";
 
 interface IProps {
   end: any;
-  timer: number
+  timer: number;
 }
-
-
 const Number = styled.div`
   font-size: 48px;
   display: block;
-  color: #fff;
+  color: ${accentColors.white};
   font-weight: 700;
 `;
-const CountUp: React.FC<IProps> = ({ end, timer=50 }) => {
+const CountUp: React.FC<IProps> = ({ end, timer = 50 }) => {
   const [state, setState] = useState(null);
   const ref = useRef(0);
 
