@@ -1,23 +1,20 @@
 import styled from "styled-components";
-import { AboutSvg, AboutSvg2, accentColors, CheckSvg, Container, defaultt, primary, SectionHeader } from "../../assets";
-
-const Section = styled.section`
-  /* @media (max-width: 860px) {
-    margin-left: -40px;
-  }
-  @media (max-width: 768px) {
-    margin-left: -180px;
-  } */
-`;
-
-
+import {
+  AboutSvg,
+  AboutSvg2,
+  accentColors,
+  CheckSvg,
+  Container,
+  defaultt,
+  SectionHeader,
+} from "../../assets";
 
 const CallUs = styled.div`
   position: absolute;
   left: 10%;
   right: 10%;
   bottom: 10%;
-  background-color: #fff;
+  background-color: ${accentColors.white};
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.08);
   padding: 20px;
   text-align: center;
@@ -52,7 +49,6 @@ const Row = styled.div`
   }
 `;
 
-
 const Position = styled.div`
   position: relative;
   background-image: url(${AboutSvg});
@@ -79,8 +75,6 @@ const Position = styled.div`
     min-height: 400px;
   }
 `;
-
-
 
 const Content = styled.div`
   min-height: 750px;
@@ -119,7 +113,6 @@ const Content = styled.div`
   }
   p {
     font-style: italic !important;
-
   }
 `;
 
@@ -180,42 +173,36 @@ const Ahref = styled.a`
     z-index: 100;
     transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-  :hover
-  {
+  :hover {
     :before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-40%) translateY(-50%);
-    width: 0;
-    height: 0;
-    border: none;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #fff;
-    z-index: 200;
-    -webkit-animation: none;
-    animation: none;
-    border-radius: 0;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-40%) translateY(-50%);
+      width: 0;
+      height: 0;
+      border: none;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 15px solid #fff;
+      z-index: 200;
+      -webkit-animation: none;
+      animation: none;
+      border-radius: 0;
+    }
   }
-  }
-  :hover
-  {
+  :hover {
     :after {
-    border-left: 15px solid ${accentColors.primary};
-    transform: scale(20);
-  }
+      border-left: 15px solid ${accentColors.primary};
+      transform: scale(20);
+    }
   }
 `;
 
-
-
-
-
 const About = () => {
   return (
-    <Section id="about">
+    <section id="about">
       <Container data-aos="fade-up">
         <SectionHeader>
           <h2>About Us</h2>
@@ -223,7 +210,6 @@ const About = () => {
             Learn More <span>About Us</span>
           </p>
         </SectionHeader>
-
         <Row>
           <Position data-aos="fade-up" data-aos-delay="150">
             <CallUs>
@@ -272,7 +258,7 @@ const About = () => {
           </Content>
         </Row>
       </Container>
-    </Section>
+    </section>
   );
 };
 
