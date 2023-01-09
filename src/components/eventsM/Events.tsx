@@ -27,15 +27,6 @@ const Container = styled.div`
   .swiper-pagination-bullet-active {
     background-color: ${accentColors.primary};
   }
-
-    /* .swiper-slide-active + .swiper-slide {
-        @media (min-width: 1200px) {
-      border-left: 1px solid rgba(232, 18, 18, 0.5);
-      border-right: 1px solid rgba(255, 255, 255, 0.5);
-      z-index: 1;
-        }
-    } */
-  
 `;
 
 

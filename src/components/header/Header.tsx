@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { ChervonSVG, secondary } from "../../assets";
+import { ChervonSVG, secondary, size } from "../../assets";
 import styled from "styled-components";
 import { accentColors } from "../../assets";
 
 const Wrapper = styled.header`
   position: fixed;
   display: flex;
+  /* justify-content: space-around; */
   align-items: center;
   background: ${accentColors.white};
   transition: all 0.5s;
@@ -21,6 +22,24 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  ${size.S} {
+    max-width: 540px;
+  }
+  ${size.M} {
+    max-width: 720px;
+  }
+  ${size.L} {
+    max-width: 960px;
+  }
+  ${size.XL} {
+    max-width: 1140px;
+  }
+  ${size.XXL} {
+    max-width: 1320px;
+  }
 `;
 const Logo = styled.a`
   font-weight: 700;

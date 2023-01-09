@@ -6,20 +6,15 @@ import gallery from "../../data/images.json";
 import Modal from "../modal/Modal";
 
 const Wrapper = styled.div`
-  /* max-width: 1350px;
-  padding: 0px 89px;
-  margin: 50px auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
+display: flex;
 
-  @media (max-width: 390px) {
+  /* @media (max-width: 390px) {
     padding: 0px 0px;
-  }
+  } */
 
   img {
     cursor: pointer;
-  } */
+  }
 `;
 const MenuItem = styled.div`
   -moz-text-align-last: center;
@@ -88,6 +83,7 @@ function IndexGallery() {
 
   return (
     <Wrapper>
+      
       {gallery.gallery.map((item, index) => (
         <div key={index} className="wrapper-images">
           <MenuItem>

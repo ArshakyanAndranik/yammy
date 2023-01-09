@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import IndexGallery from ".";
+
 import { Container, SectionHeader, size } from "../../assets";
 
 const GallerySection = styled.section`
