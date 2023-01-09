@@ -12,7 +12,6 @@ const Section = styled.section`
   min-height: 60vh;
   padding: 160px 0 60px 0;
 `;
-
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -21,7 +20,6 @@ const Wrapper = styled.div`
     align-items: center;
   }
 `;
-
 const NoName = styled.div`
   display: flex;
   flex-direction: column;
@@ -30,12 +28,10 @@ const NoName = styled.div`
     margin-left: 20px;
   }
 `;
-
 const Info = styled.h2`
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 20px;
-
   color: ${accentColors.secondary};
   font-family: "Amatic SC", sans-serif;
   @media (max-width: 640px) {
@@ -66,22 +62,14 @@ const Btn1 = styled.a`
   padding: 12px 36px;
   border-radius: 50px;
   transition: 0.5s;
-  color: #fff;
+  color: ${accentColors.white};
   background: ${accentColors.primary};
   box-shadow: 0 8px 28px rgba(206, 18, 18, 0.2);
   :hover {
     background: rgba(206, 18, 18, 0.8);
-    color: #fff;
+    color: ${accentColors.white};
     box-shadow: 0 8px 28px rgba(206, 18, 18, 0.45);
   }
-`;
-
-const Btn2 = styled.a`
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: ${accentColors.secondary};
-  font-weight: 600;
 `;
 
 const ImgSvg = styled.img`
