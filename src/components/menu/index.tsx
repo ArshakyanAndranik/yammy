@@ -17,7 +17,6 @@ const Wrapper = styled.div`
   @media (max-width: 390px) {
     padding: 0px 0px;
   }
-
   img {
     cursor: pointer;
   }
@@ -28,7 +27,6 @@ const MenuItem = styled.div`
   max-width: 300px;
   text-align: center;
   margin-left: 40px;
-
   h4 {
     font-size: 16px;
     font-weight: 500;
@@ -40,7 +38,6 @@ const MenuItem = styled.div`
   h2 {
     font-family: ${secondary};
     color: ${accentColors.secondary};
-
     margin-bottom: -20px;
     font-size: 22px;
   }
@@ -80,13 +77,11 @@ function Index() {
     const newUrl = menu.menu.filter((item) => {
       return menu.menu.indexOf(item) === newIndex;
     });
-
     const newItem = newUrl[0].link;
     //@ts-ignore
     setClickedImg(newItem);
     setCurrentIndex(newIndex);
   };
-
   const handelRotationLeft = () => {
     const totalLength = menu.menu.length;
     if (currentIndex === 0) {
