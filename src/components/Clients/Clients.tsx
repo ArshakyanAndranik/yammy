@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Container, secondary, StatsBgSvg } from "../../assets";
 import CountUp from "../../countUp/CountUp";
+import { Container, secondary, StatsBgSvg } from "../../assets";
 
 const Section = styled.section`
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -13,25 +13,18 @@ const Section = styled.section`
     }
   }
 `;
-
-
 const Row = styled.div`
   display: flex;
   @media (max-width: 992px) {
     flex-direction: column;
   }
 `;
-
-
 const Div2 = styled.div`
   text-align: center;
   width: 100%;
   height: 100%;
 `;
-
 const Ptext = styled.p`
-  padding: 0;
-  margin: 0;
   font-family: ${secondary};
   font-size: 16px;
   font-weight: 700;
@@ -40,14 +33,13 @@ const Ptext = styled.p`
 
 const Clients = () => {
   return (
-    <Section >
+    <Section>
       <Container data-aos="zoom-out">
         <Row>
           <Div2>
             <CountUp end={232} timer={5} />
             <Ptext>Clients</Ptext>
           </Div2>
-
           <Div2>
             <CountUp end={521} timer={2} />
             <Ptext>Projects</Ptext>
