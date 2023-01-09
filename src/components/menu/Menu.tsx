@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Index from ".";
 
-import { accentColors, Container, secondary, SectionHeader } from "../../assets";
-
+import {
+  accentColors,
+  Container,
+  secondary,
+  SectionHeader,
+} from "../../assets";
 
 const Nav = styled.ul`
   display: flex;
@@ -26,7 +30,6 @@ const Link = styled.a`
   :hover {
     border-bottom: 2px solid #bfb6b670;
   }
-
   h4 {
     font-size: 18px;
     font-weight: 400;
@@ -51,7 +54,6 @@ const TabHeader = styled.div`
     font-size: 14px;
     text-transform: uppercase;
     color: #676775;
-
   }
   h3 {
     font-size: 36px;
@@ -61,11 +63,10 @@ const TabHeader = styled.div`
   }
 `;
 
-
 const Menu = () => {
-   const [state, setState] = useState("Starters");
+  const [state, setState] = useState("Starters");
 
-  function changeName(value:string) {
+  function changeName(value: string) {
     setState(value);
   }
   return (
