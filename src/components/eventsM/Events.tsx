@@ -29,14 +29,11 @@ const Container = styled.div`
   }
 `;
 
-
-
 const Description = styled.p`
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.9);
   position: relative;
 `;
-
 const SwiperR = styled.div`
   display: flex;
 `;
@@ -114,7 +111,7 @@ const SwiperSlide3 = styled.div`
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 5px;
-    color: #fff;
+    color: ${accentColors.white};
     position: relative;
   }
   @media (max-width: 575px) {
@@ -128,7 +125,7 @@ const SwiperSlide3 = styled.div`
   }
 `;
 const Price = styled.div`
-  color: #fff;
+  color: ${accentColors.white};
   border-bottom: 2px solid ${accentColors.primary};
   font-size: 32px;
   font-weight: 700;
@@ -136,7 +133,6 @@ const Price = styled.div`
   position: relative;
   align-self: flex-start !important;
 `;
-
 const Events = () => {
   return (
     <section id="events">
@@ -164,7 +160,6 @@ const Events = () => {
               clickable: true,
             }}
             breakpoints={{
-
               1200: {
                 slidesPerView: 3,
               },
@@ -193,7 +188,6 @@ const Events = () => {
                   </Description>
                 </SwiperSlid2>
               </SwiperSlide>
-
               <SwiperSlide>
                 <SwiperSlide3>
                   <h3>Birthday Parties</h3>
