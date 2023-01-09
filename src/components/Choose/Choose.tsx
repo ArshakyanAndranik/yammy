@@ -60,7 +60,7 @@ const WhyBox = styled.div`
   }
 `;
 
-const TextCentr = styled.div`
+const TextCenter = styled.div`
   text-align: center !important;
 `;
 
@@ -119,7 +119,6 @@ const Cont1 = styled.div`
     color: ${accentColors.primary};
     margin-bottom: 30px;
     font-size: 32px;
-    /* margin-bottom: 30px; */
     background: rgba(206, 18, 18, 0.1);
     border-radius: 50px;
     display: flex;
@@ -156,11 +155,11 @@ const Choose = () => {
                   et. Tenetur quia eos. Autem tempore quibusdam vel
                   necessitatibus optio ad corporis.
                 </p>
-                <TextCentr>
+                <TextCenter>
                   <a href="#" className="more-btn">
                     Learn More <i className="bx bx-chevron-right"></i>
                   </a>
-                </TextCentr>
+                </TextCenter>
               </WhyBox>
             </Container1>
             <Row>
