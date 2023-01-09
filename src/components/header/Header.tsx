@@ -45,7 +45,6 @@ const Logo = styled.a`
   font-weight: 700;
   color: ${accentColors.default};
   margin: 0;
-  margin-left: 140px;
   @media (max-width: 390px) {
     margin-left: 0px;
   }
@@ -65,7 +64,7 @@ const Book = styled.a`
   color: ${accentColors.white};
   background: ${accentColors.primary};
   padding: 8px 20px;
-  margin-left: 50px;
+  margin-left: 30px;
   border-radius: 50px;
   transition: 0.3s;
   :focus {
@@ -108,8 +107,8 @@ const Icon2 = styled.i`
 `;
 
 const StyledBurger = styled.div`
-  width: 2rem;
-  height: 2rem;
+  width: 30px;
+  height: 30px;
   position: fixed;
   top: 15px;
   right: 20px;
@@ -160,7 +159,14 @@ const StyledBurger = styled.div`
   }
 `;
 const Navbar = styled.nav`
-  /* padding: 0; */
+  padding: 0;
+  .active {
+    color: #000;
+    :before {
+      visibility: visible;
+      width: 100%;
+    }
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -170,24 +176,38 @@ const Navbar = styled.nav`
   }
   li {
     position: relative;
+    :hover > a {
+      color: #000;
+      :before {
+        visibility: visible;
+        width: 100%;
+      }
+    }
   }
   > ul > li {
     white-space: nowrap;
     padding: 10px 0 10px 28px;
   }
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 3px;
-      font-size: 16px;
-      font-weight: 600;
-      color: ${accentColors.grey};
-      white-space: nowrap;
-      transition: 0.3s;
-      position: relative;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    font-size: 16px;
+    font-weight: 600;
+    color: ${accentColors.grey};
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+    :hover {
+      color: #000;
+      :before {
+        visibility: visible;
+        width: 100%;
+      }
     }
-  > ul > li a:before {
+  }
+  > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -342,7 +362,6 @@ const Navbar = styled.nav`
     position: fixed;
     top: 0;
     right: -100%;
-
 
     transform: ${
       // @ts-ignore
