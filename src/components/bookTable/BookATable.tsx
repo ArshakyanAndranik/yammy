@@ -1,6 +1,10 @@
 import styled from "styled-components";
-import { accentColors, Container, ReservationSvg, SectionHeader } from "../../assets";
-
+import {
+  accentColors,
+  Container,
+  ReservationSvg,
+  SectionHeader,
+} from "../../assets";
 
 const Row = styled.div`
   display: flex;
@@ -44,7 +48,6 @@ const Form = styled.form`
 const Rowgy4 = styled.div`
   display: flex;
   flex-wrap: wrap;
-
 `;
 const Collg4colmd6 = styled.div`
   flex: 0 0 auto;
@@ -60,12 +63,12 @@ const Input = styled.input`
   display: block;
   width: 75%;
   margin-top: 20px;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  padding: 6px 15px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: ${accentColors.white};
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-appearance: none;
@@ -96,87 +99,30 @@ const Input = styled.input`
   }
   :focus {
     color: #212529;
-    background-color: #fff;
+    background-color: ${accentColors.white};
     border-color: red;
     outline: 0;
   }
-  ::-webkit-date-and-time-value {
-    height: 1.5em;
-  }
-  ::-moz-placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-  ::placeholder {
-    color: #6c757d;
-    opacity: 1;
-  }
-  :disabled {
-    background-color: #e9ecef;
-    opacity: 1;
-  }
-  ::-webkit-file-upload-button {
-    padding: 0.375rem 0.75rem;
-    margin: -0.375rem -0.75rem;
-    -webkit-margin-end: 0.75rem;
-    margin-inline-end: 0.75rem;
-    color: #212529;
-    background-color: #e9ecef;
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: 1px;
-    border-radius: 0;
-    -webkit-transition: color 0.15s ease-in-out,
-      background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-      box-shadow 0.15s ease-in-out;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    @media (prefers-reduced-motion: reduce) {
-      -webkit-transition: none;
-      transition: none;
-    }
-  }
-  ::file-selector-button {
-    padding: 0.375rem 0.75rem;
-    margin: -0.375rem -0.75rem;
-    -webkit-margin-end: 0.75rem;
-    margin-inline-end: 0.75rem;
-    color: #212529;
-    background-color: #e9ecef;
-    pointer-events: none;
-    border-color: inherit;
-    border-style: solid;
-    border-width: 0;
-    border-inline-end-width: 1px;
-    border-radius: 0;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
-  }
 `;
 const Formgroupmt3 = styled.div`
-  margin-top: 1rem !important;
+  margin-top: 20px !important;
 `;
 
 const Textarea = styled.textarea`
   display: block;
   width: 91.5%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  padding: 6px 15px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: ${accentColors.white};
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.375rem;
+  border-radius: 6px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin: 0;
   font-family: inherit;
