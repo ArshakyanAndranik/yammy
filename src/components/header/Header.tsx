@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { ChervonSVG, secondary, size } from "../../assets";
 import styled from "styled-components";
+import { ChervonSVG, secondary, size } from "../../assets";
 import { accentColors } from "../../assets";
 
 const Wrapper = styled.header`
   position: fixed;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   background: ${accentColors.white};
   transition: all 0.5s;
@@ -76,12 +75,12 @@ const Book = styled.a`
     border-radius: 50px;
     transition: 0.3s;
     :hover {
-      color: #fff;
+      color: ${accentColors.white};
       background: rgba(206, 18, 18, 0.8);
     }
   }
   :hover {
-    color: #fff;
+    color: ${accentColors.white};
     background: rgba(206, 18, 18, 0.8);
   }
 `;
@@ -122,8 +121,8 @@ const StyledBurger = styled.div`
   }
 
   div {
-    width: 2rem;
-    height: 0.25rem;
+    width: 40px;
+    height: 5px;
     background-color: ${
       // @ts-ignore
       ({ open }) => (open ? "#ccc" : "#333")
@@ -158,16 +157,6 @@ const StyledBurger = styled.div`
     }
   }
 `;
-
-
-
-
-
-
-
-
-
-
 
 const Navbar = styled.nav`
   padding: 0;
@@ -212,7 +201,7 @@ const Navbar = styled.nav`
       position: relative;
     }
   }
-  >ul>li>a:before {
+  > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -224,37 +213,31 @@ const Navbar = styled.nav`
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
   }
-a:hover:before{
-      visibility: visible;
-    width: 100%;
-}
-
-li:hover>a:before{
-   visibility: visible;
-    width: 100%;
-}
-.active:before {
+  a:hover:before {
     visibility: visible;
     width: 100%;
   }
-a:hover{
-   color: #000;
-}
-.active{
-  color: #000;
-}
-.active:focus{
-  color: #000;
-}
-li:hover>a {
+
+  li:hover > a:before {
+    visibility: visible;
+    width: 100%;
+  }
+  .active:before {
+    visibility: visible;
+    width: 100%;
+  }
+  a:hover {
     color: #000;
   }
-
-
-
-
-
-
+  .active {
+    color: #000;
+  }
+  .active:focus {
+    color: #000;
+  }
+  li:hover > a {
+    color: #000;
+  }
 
   .dropdown {
     ul {
@@ -280,24 +263,24 @@ li:hover>a {
         text-transform: none;
         font-weight: 600;
       }
-        ul {
-          a:hover {
-            color: ${accentColors.primary};
-          }
+      ul {
+        a:hover {
+          color: ${accentColors.primary};
         }
-        ul {
-          .active:hover {
-            color: ${accentColors.primary};
-          }
+      }
+      ul {
+        .active:hover {
+          color: ${accentColors.primary};
         }
+      }
 
-        ul {
-          li:hover>a {
-            color: ${accentColors.primary};
-          }
+      ul {
+        li:hover > a {
+          color: ${accentColors.primary};
         }
-      
-      .dropdown:hover>ul {
+      }
+
+      .dropdown:hover > ul {
         opacity: 1;
         top: 100%;
         visibility: visible;
@@ -386,7 +369,6 @@ li:hover>a {
       left: -100%;
     }
   }
-
   @media (max-width: 1279px) {
     position: fixed;
     top: 0;
@@ -400,7 +382,7 @@ li:hover>a {
     right: 0;
     height: 100vh;
     width: 300px;
-    padding-top: 3.5rem;
+    padding-top: 70px;
     transition: transform 0.3s ease-in-out;
     ul {
       position: absolute;
@@ -536,7 +518,9 @@ const Header = () => {
           {/* @ts-ignore */}
           <ul>
             <li>
-              <a href="#hero" className="active">Home</a>
+              <a href="#hero" className="active">
+                Home
+              </a>
             </li>
             <li>
               <a href="#about">About</a>
