@@ -1,12 +1,20 @@
 import styled from "styled-components";
-import {СlockSvg, FCSVG, GeoAltSvg, INSVG, LNSVG, TelephoneSVG, TWSVG, Container } from "../../assets";
+import {
+  СlockSvg,
+  FCSVG,
+  GeoAltSvg,
+  INSVG,
+  LNSVG,
+  TelephoneSVG,
+  TWSVG,
+  Container,
+} from "../../assets";
 
 const Footers = styled.footer`
   font-size: 14px;
   background-color: #1f1f24;
   padding: 50px 0;
   color: rgba(255, 255, 255, 0.7);
-
   h4 {
     font-size: 16px;
     font-weight: bold;
@@ -14,11 +22,9 @@ const Footers = styled.footer`
     color: #fff;
   }
 `;
-
 const Rowgy3 = styled.div`
   display: flex;
   flex-wrap: wrap;
-
 `;
 const Collz3colmd6 = styled.div`
   display: flex;
@@ -59,12 +65,10 @@ const Collz3colmd7 = styled.div`
     flex: 0 0 auto;
     width: 23%;
   }
-
 `;
 const SocialLinks = styled.div`
   display: flex;
-
-   a {
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,22 +84,17 @@ const SocialLinks = styled.div`
       color: #fff;
       border-color: #fff;
     }
-  } 
-
+  }
 `;
-
-
 const SocialDiv = styled.div`
   margin-left: 100px;
 `;
-
-
-
 const Copyright = styled.div`
   text-align: center;
   padding-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
+
 const Footer = () => {
   return (
     <Footers id="footer">
