@@ -19,7 +19,6 @@ import { BaseModalBackground, ModalProvider } from "styled-react-modal";
 import styled from "styled-components";
 import Gallery from "./components/gallery/Gallery";
 
-
 const SpecialModalBackground = styled(BaseModalBackground)`
   background-color: #0c0b0bc6;
   z-index: 999999999;
@@ -42,7 +41,7 @@ const App = () => {
         <Events />
         <Chefs />
         <BookATable />
-        <Gallery/>
+        <Gallery />
         <Contact />
         <Footer />
         <ScrollToTop smooth className="scroll-to-top" color="white" />
