@@ -1,16 +1,13 @@
 import styled from "styled-components";
 import {
-  AboutSvg,
   accentColors,
   chefs1SVG,
   chefs2SVG,
   chefs3SVG,
   Container,
-  defaultt,
   FCSVG,
   INSVG,
   LNSVG,
-  primary,
   SectionHeader,
   TeamShapeSvg,
   TWSVG,
@@ -19,7 +16,6 @@ import {
 const Section = styled.section`
   background-color: #eee;
 `;
-
 
 const Row = styled.div`
   display: flex;
@@ -34,7 +30,6 @@ const Collg = styled.div`
   align-items: stretch;
   flex: 0 0 auto;
   margin: 0 auto;
-  width: 33.33333333%;
   width: 31%;
   @media (max-width: 390px) {
     width: 100%;
@@ -45,7 +40,7 @@ const ChefMember = styled.div`
   overflow: hidden;
   text-align: center;
   border-radius: 5px;
-  background: #fff;
+  background: ${accentColors.white};
   box-shadow: 0px 0 30px rgba(55, 55, 63, 0.08);
   transition: 0.3s;
   :hover {
