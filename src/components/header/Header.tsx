@@ -128,7 +128,7 @@ const StyledBurger = styled.div`
       ({ open }) => (open ? "#ccc" : "#333")
     };
     border-radius: 10px;
-    transform-origin: 1px;
+    transform-origin: 5px;
     transition: all 0.3s linear;
 
     &:nth-child(1) {
@@ -518,7 +518,7 @@ const Header = () => {
           {/* @ts-ignore */}
           <ul>
             <li>
-              <a href="#hero" className="active">
+              <a href="#hero">
                 Home
               </a>
             </li>
