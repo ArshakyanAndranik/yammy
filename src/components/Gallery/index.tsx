@@ -1,32 +1,39 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { accentColors, secondary } from "../../assets";
+
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css/pagination";
+import "swiper/css";
+import "swiper/css/free-mode";
+
 
 import gallery from "../../data/images.json";
 import Modal from "../modal/Modal";
+import { accentColors } from "../../assets";
 
 const Wrapper = styled.div`
-display: flex;
-
-  /* @media (max-width: 390px) {
-    padding: 0px 0px;
-  } */
-
-  img {
-    cursor: pointer;
+  display: flex;
+  height: 200px;
+  margin-left: 70px;
+  margin-right: 70px;
+  .swiper-pagination {
+    z-index: 2000000;
+    margin-top: -9px;
+    position: relative;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #d1d1d7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: ${accentColors.primary};
   }
 `;
-const MenuItem = styled.div`
-  -moz-text-align-last: center;
-  text-align-last: center;
-  max-width: 300px;
-  text-align: center;
-  margin-left: 40px;
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-`;
+
 function IndexGallery() {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -83,14 +90,41 @@ function IndexGallery() {
 
   return (
     <Wrapper>
-      
-      {gallery.gallery.map((item, index) => (
-        <div key={index} className="wrapper-images">
-          <MenuItem>
-            <img src={item.link} onClick={() => handleClick(item, index)} />
-          </MenuItem>
-        </div>
-      ))}
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        slidesPerView={3}
+        loop={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+        breakpoints={{
+          1200: {
+            slidesPerView: 5,
+          },
+        }}
+      >
+        {gallery.gallery.map((item, index) => (
+          <div key={index} className="wrapper-images">
+            <div>
+              <SwiperSlide>
+                <img
+                  style={{ maxWidth: "100%", height: "auto" }}
+                  src={item.link}
+                  onClick={() => handleClick(item, index)}
+                />
+              </SwiperSlide>
+            </div>
+          </div>
+        ))}
+      </Swiper>
       <div>
         {clickedImg && (
           <Modal
